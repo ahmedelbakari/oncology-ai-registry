@@ -26,6 +26,7 @@ ALLOWED_MODALITIES = {
     "radiology_ct",
     "radiology_mri",
     "radiology_cxr",
+    "radiology_us",
     "genomic_sequencing_with_ai",
     "liquid_biopsy",
     "multiomics",
