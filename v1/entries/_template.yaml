@@ -1,0 +1,61 @@
+# Template for new registry entries.
+# Copy this file to <your-product-id>.yaml and fill in every applicable field.
+# Use `null` or remove the key if a field truly doesn't apply.
+
+id: unique-slug-no-spaces
+product_name: Product Name
+company: Company Name
+company_url: https://company.example
+
+# Array. Use standard cancer names. Allowed: breast, lung, prostate, bladder,
+# colorectal, pancreatic, liver, kidney, head_and_neck, ovarian, cervical,
+# gastric, hematologic, brain, melanoma, thyroid, solid_tumor, pan_cancer,
+# dermatopathology
+cancer_types:
+  - prostate
+
+# One of: histopathology, radiology_mammography, radiology_ct, radiology_mri,
+# radiology_cxr, genomic_sequencing_with_ai, liquid_biopsy, multiomics
+modality: histopathology
+
+intended_use: >
+  Short one-paragraph description of what the product does, from the manufacturer
+  or the FDA labeling. Keep it factual.
+
+regulatory:
+  # One of: "Breakthrough Device Designation", "De Novo authorized",
+  # "510(k) cleared", "PMA approved", "LDT", "Research Use"
+  fda_status: LDT
+  fda_pathway: ldt            # breakthrough_device | de_novo | 510k | pma | ldt | research_use
+  fda_decision_date: null     # YYYY-MM or YYYY-MM-DD when applicable
+  ldt: true
+  ny_clep: null               # cleared | pending | na
+  cap_accredited: null
+  clia_certified: null
+  ce_marked: null
+  medicare_coverage: null
+
+clinical_evidence:
+  key_publication: "Short title of the pivotal publication"
+  journal: "Journal Name"
+  year: 2024
+  url: https://example.com/article
+  # Only include performance metrics if they are from a peer-reviewed publication.
+  # Never from a press release.
+  performance:
+    auc: null
+    sensitivity: null
+    specificity: null
+
+deployment:
+  available: true
+  us_cancer_centers_estimated: null
+  patients_estimated: null
+  partners: []
+  primary_markets: []         # e.g. ["US"], ["EU", "UK"]
+
+# Every factual claim should have a source. Date accessed is required.
+sources:
+  - type: fda_db              # fda_db | pubmed | company | press | investor
+    url: https://...
+    date_accessed: 2026-04-20

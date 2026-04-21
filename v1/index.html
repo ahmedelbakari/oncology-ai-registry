@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OncologyAI Registry — public registry of AI diagnostics in oncology</title>
+  <meta name="description" content="Public, curated registry of AI/ML-based diagnostic tools in oncology. Regulatory status, clinical evidence, and deployment signals — every entry sourced.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .navy { color: #1F3A5F; }
+    .navy-bg { background-color: #1F3A5F; }
+    .badge { display: inline-block; padding: 0.15em 0.55em; border-radius: 0.35em; font-size: 0.72em; font-weight: 600; }
+    details > summary { list-style: none; cursor: pointer; }
+    details > summary::-webkit-details-marker { display: none; }
+    .row:hover { background: #f8fafc; }
+  </style>
+</head>
+<body class="bg-white text-slate-900">
+
+<!-- Header -->
+<header class="border-b">
+  <div class="max-w-6xl mx-auto px-4 py-5 flex items-center justify-between">
+    <div>
+      <div class="text-2xl font-bold navy">OncologyAI Registry</div>
+      <div class="text-xs text-slate-500">Public, curated registry of AI diagnostics in oncology</div>
+    </div>
+    <nav class="text-sm text-slate-600 space-x-4">
+      <a href="#registry" class="hover:underline">Registry</a>
+      <a href="methodology.html" class="hover:underline">Methodology</a>
+      <a href="about.html" class="hover:underline">About</a>
+      <a href="https://github.com/" class="hover:underline">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="navy-bg text-white">
+  <div class="max-w-6xl mx-auto px-4 py-14">
+    <h1 class="text-3xl md:text-4xl font-bold leading-tight">A public registry of every AI-based diagnostic tool in U.S. oncology.</h1>
+    <p class="mt-4 text-slate-200 max-w-3xl">
+      Regulatory status, clinical evidence, deployment signals — every entry sourced.
+      Built for researchers, clinicians, regulators, payers, and journalists who need a single,
+      independent reference. Updated quarterly.
+    </p>
+    <div class="mt-6 flex flex-wrap gap-3 text-sm">
+      <span class="badge bg-white text-slate-900" id="entry-count">— entries</span>
+      <span class="badge bg-emerald-500 text-white">Open data · CC BY 4.0</span>
+      <span class="badge bg-amber-500 text-white">v0.1 · launching 2026</span>
+    </div>
+  </div>
+</section>
+
+<!-- Filters -->
+<section id="registry" class="max-w-6xl mx-auto px-4 py-8">
+  <div class="flex flex-wrap items-center gap-3 mb-4">
+    <input id="search" type="search" placeholder="Search products, companies, cancers…"
+      class="border border-slate-300 rounded px-3 py-2 text-sm w-72">
+    <select id="cancer-filter" class="border border-slate-300 rounded px-2 py-2 text-sm">
+      <option value="">All cancer types</option>
+    </select>
+    <select id="reg-filter" class="border border-slate-300 rounded px-2 py-2 text-sm">
+      <option value="">All regulatory status</option>
+    </select>
+    <select id="modality-filter" class="border border-slate-300 rounded px-2 py-2 text-sm">
+      <option value="">All modalities</option>
+    </select>
+    <button id="reset" class="text-sm text-slate-600 underline">Reset</button>
+    <span class="ml-auto text-xs text-slate-500" id="visible-count"></span>
+  </div>
+
+  <div class="overflow-x-auto border border-slate-200 rounded">
+    <table class="w-full text-sm">
+      <thead class="bg-slate-50 text-slate-600 text-left text-xs uppercase tracking-wide">
+        <tr>
+          <th class="px-3 py-2">Product</th>
+          <th class="px-3 py-2">Company</th>
+          <th class="px-3 py-2">Cancer</th>
+          <th class="px-3 py-2">Modality</th>
+          <th class="px-3 py-2">Regulatory status</th>
+          <th class="px-3 py-2">Evidence</th>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+
+  <p class="text-xs text-slate-500 mt-3">
+    Missing or wrong? <a href="https://github.com/" class="underline navy">Suggest an edit on GitHub</a>.
+    Curator: Ahmed Elbakri. License: CC BY 4.0.
+  </p>
+</section>
+
+<!-- Footer -->
+<footer class="mt-12 border-t bg-slate-50">
+  <div class="max-w-6xl mx-auto px-4 py-8 text-xs text-slate-500 flex flex-wrap justify-between gap-2">
+    <div>OncologyAI Registry · v0.1 · last updated <span id="updated"></span></div>
+    <div>Independent project · No financial relationships disclosed for the curator with listed companies except as noted on individual entries.</div>
+  </div>
+</footer>
+
+<script>
+const REG_LABELS = {
+  "Breakthrough Device Designation": "bg-purple-100 text-purple-800",
+  "De Novo authorized":              "bg-emerald-100 text-emerald-800",
+  "510(k) cleared":                  "bg-emerald-100 text-emerald-800",
+  "PMA approved":                    "bg-emerald-100 text-emerald-800",
+  "LDT":                             "bg-blue-100 text-blue-800",
+  "Research Use":                    "bg-amber-100 text-amber-800"
+};
+
+const MODALITY_LABELS = {
+  "histopathology":              "Histopathology",
+  "radiology_mammography":       "Mammography",
+  "radiology_ct":                "CT",
+  "radiology_cxr":               "Chest X-ray",
+  "radiology_mri":               "MRI",
+  "genomic_sequencing_with_ai":  "Genomic + AI",
+  "liquid_biopsy":               "Liquid biopsy",
+  "multiomics":                  "Multi-omics"
+};
+
+let DATA = null;
+
+async function load() {
+  const r = await fetch("data.json", {cache: "no-cache"});
+  DATA = await r.json();
+  document.getElementById("entry-count").textContent = `${DATA.entries.length} entries`;
+  document.getElementById("updated").textContent = DATA.last_updated;
+
+  // Populate filters
+  const cancers = new Set();
+  const regs = new Set();
+  const mods = new Set();
+  DATA.entries.forEach(e => {
+    (e.cancer_types || []).forEach(c => cancers.add(c));
+    if (e.regulatory && e.regulatory.fda_status) regs.add(e.regulatory.fda_status);
+    if (e.modality) mods.add(e.modality);
+  });
+  fill("cancer-filter", [...cancers].sort());
+  fill("reg-filter", [...regs].sort());
+  fill("modality-filter", [...mods].sort(), MODALITY_LABELS);
+
+  ["search","cancer-filter","reg-filter","modality-filter"].forEach(id => {
+    document.getElementById(id).addEventListener("input", render);
+  });
+  document.getElementById("reset").addEventListener("click", () => {
+    document.getElementById("search").value = "";
+    document.getElementById("cancer-filter").value = "";
+    document.getElementById("reg-filter").value = "";
+    document.getElementById("modality-filter").value = "";
+    render();
+  });
+
+  render();
+}
+
+function fill(id, values, labels) {
+  const sel = document.getElementById(id);
+  values.forEach(v => {
+    const o = document.createElement("option");
+    o.value = v;
+    o.textContent = (labels && labels[v]) ? labels[v] : v.replace(/_/g, " ");
+    sel.appendChild(o);
+  });
+}
+
+function render() {
+  const q     = document.getElementById("search").value.toLowerCase();
+  const cf    = document.getElementById("cancer-filter").value;
+  const rf    = document.getElementById("reg-filter").value;
+  const mf    = document.getElementById("modality-filter").value;
+
+  const filtered = DATA.entries.filter(e => {
+    if (q) {
+      const hay = [e.product_name, e.company, (e.cancer_types || []).join(" "), e.intended_use || ""].join(" ").toLowerCase();
+      if (!hay.includes(q)) return false;
+    }
+    if (cf && !(e.cancer_types || []).includes(cf)) return false;
+    if (rf && (!e.regulatory || e.regulatory.fda_status !== rf)) return false;
+    if (mf && e.modality !== mf) return false;
+    return true;
+  });
+
+  const rows = document.getElementById("rows");
+  rows.innerHTML = "";
+  filtered.forEach(e => {
+    const tr = document.createElement("tr");
+    tr.className = "row border-t border-slate-200 align-top";
+    const reg = (e.regulatory && e.regulatory.fda_status) || "";
+    const regCls = REG_LABELS[reg] || "bg-slate-100 text-slate-700";
+    const evidence = e.clinical_evidence
+      ? `<a href="${e.clinical_evidence.url || '#'}" class="navy hover:underline">${e.clinical_evidence.journal || ""} ${e.clinical_evidence.year || ""}</a>`
+      : '<span class="text-slate-400">—</span>';
+    const modality = MODALITY_LABELS[e.modality] || (e.modality || "").replace(/_/g, " ");
+    tr.innerHTML = `
+      <td class="px-3 py-3">
+        <div class="font-semibold">${e.product_name}</div>
+        <div class="text-xs text-slate-500 mt-1">${e.intended_use || ""}</div>
+      </td>
+      <td class="px-3 py-3">
+        <a href="${e.company_url || '#'}" class="navy hover:underline">${e.company}</a>
+      </td>
+      <td class="px-3 py-3">${(e.cancer_types || []).map(c => c.replace(/_/g, " ")).join(", ")}</td>
+      <td class="px-3 py-3">${modality}</td>
+      <td class="px-3 py-3">
+        <span class="badge ${regCls}">${reg || "—"}</span>
+        ${e.regulatory && e.regulatory.fda_decision_date ? `<div class="text-xs text-slate-500 mt-1">${e.regulatory.fda_decision_date}</div>` : ""}
+        ${e.regulatory && e.regulatory.ldt ? '<div class="text-xs text-slate-500 mt-1">LDT · ' + (e.regulatory.ny_clep === "cleared" ? "NY CLEP cleared" : "") + '</div>' : ""}
+      </td>
+      <td class="px-3 py-3">${evidence}</td>
+    `;
+    rows.appendChild(tr);
+  });
+
+  document.getElementById("visible-count").textContent = `${filtered.length} of ${DATA.entries.length} entries`;
+}
+
+load();
+</script>
+</body>
+</html>

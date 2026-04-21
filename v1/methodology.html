@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology — OncologyAI Registry</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>body{font-family:'Inter',system-ui,sans-serif} .navy{color:#1F3A5F} .navy-bg{background:#1F3A5F}</style>
+</head>
+<body class="bg-white text-slate-900">
+
+<header class="border-b">
+  <div class="max-w-4xl mx-auto px-4 py-5 flex items-center justify-between">
+    <a href="index.html" class="text-2xl font-bold navy">OncologyAI Registry</a>
+    <nav class="text-sm text-slate-600 space-x-4">
+      <a href="index.html" class="hover:underline">Registry</a>
+      <a href="methodology.html" class="hover:underline font-semibold navy">Methodology</a>
+      <a href="about.html" class="hover:underline">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-10 prose prose-slate">
+  <h1 class="text-3xl font-bold navy">Methodology</h1>
+  <p class="text-slate-500 text-sm">Version 0.1 — last updated April 20, 2026</p>
+
+  <h2 class="text-xl font-semibold mt-8 navy">Purpose</h2>
+  <p>The OncologyAI Registry exists to provide a single, curated, source-cited reference for AI/ML-based diagnostic tools available or in late-stage development for U.S. oncology. The registry is independent, open-data (CC BY 4.0), and updated quarterly.</p>
+
+  <h2 class="text-xl font-semibold mt-8 navy">Inclusion criteria</h2>
+  <ul>
+    <li>The product uses an AI or machine-learning algorithm as a core component of clinical decision support, diagnosis, prognosis, or treatment selection.</li>
+    <li>The intended clinical use is in oncology (any cancer type, any modality).</li>
+    <li>The product is available, in clinical trial, or formally announced for the U.S. market — including Laboratory-Developed Tests (LDTs), FDA-cleared/approved devices, and Breakthrough Device-designated products.</li>
+    <li>Each entry is supported by at least one verifiable public source (FDA database, peer-reviewed publication, or company-issued press release).</li>
+  </ul>
+
+  <h3 class="text-lg font-semibold mt-6 navy">Exclusion criteria</h3>
+  <ul>
+    <li>Pure research-only tools without a stated clinical translation pathway.</li>
+    <li>Algorithms embedded in non-oncology workflows (e.g., AI for general radiology triage that doesn't specifically address oncology).</li>
+    <li>Unsourced claims or products mentioned only in non-attributable secondary coverage.</li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-8 navy">Data fields</h2>
+  <p>Each entry captures the following, where verifiable:</p>
+  <ul>
+    <li><b>Product name and company</b></li>
+    <li><b>Cancer type(s) and modality</b> (histopathology, radiology, genomic, liquid biopsy, multi-omics)</li>
+    <li><b>Intended use</b> as stated by the manufacturer or in the FDA labeling</li>
+    <li><b>Regulatory status</b>: FDA pathway (510(k), De Novo, PMA, Breakthrough Device, LDT), decision date, NY CLEP status, CLIA/CAP accreditation</li>
+    <li><b>Clinical evidence</b>: pivotal peer-reviewed publication(s) with PMID where available</li>
+    <li><b>Deployment</b>: market availability, partner labs, estimated cancer-center adoption</li>
+    <li><b>Reimbursement</b>: CPT / PLA codes, payer coverage notes (where public)</li>
+    <li><b>Sources</b>: every claim is linked to a verifiable URL with date accessed</li>
+  </ul>
+
+  <h2 class="text-xl font-semibold mt-8 navy">Source hierarchy</h2>
+  <p>When a fact is supported by multiple sources, we prioritize:</p>
+  <ol>
+    <li>U.S. federal database entries (FDA 510(k), De Novo, PMA, Breakthrough Devices, ClinicalTrials.gov)</li>
+    <li>Peer-reviewed publications (PubMed-indexed)</li>
+    <li>Manufacturer regulatory documentation (FDA submissions, labeling)</li>
+    <li>Company-issued press releases attributable to a named source</li>
+    <li>Major trade press (STAT, Endpoints, MedTech Dive, BusinessWire)</li>
+  </ol>
+  <p>Performance metrics are reported only from peer-reviewed publications, never from press releases or marketing materials.</p>
+
+  <h2 class="text-xl font-semibold mt-8 navy">Refresh cycle</h2>
+  <p>The registry is reviewed quarterly. Material updates (new FDA decisions, major partnerships, or significant publications) are applied within two weeks of public availability.</p>
+
+  <h2 class="text-xl font-semibold mt-8 navy">Conflict-of-interest disclosure</h2>
+  <p>The curator (Ahmed Elbakri) is currently employed by Valar Labs. Valar Labs products are listed in the registry under the same inclusion criteria and source-citation standards as every other entry. The curator has no equity, advisory, or compensation relationships with any other listed company. Disclosures are reviewed and republished with each quarterly update.</p>
+
+  <h2 class="text-xl font-semibold mt-8 navy">Citation</h2>
+  <p>Please cite the registry as:</p>
+  <pre class="bg-slate-100 p-3 rounded text-sm">Elbakri A. OncologyAI Registry [v0.1]. Available at: https://oncologyairegistry.org. Accessed [date].</pre>
+  <p class="text-sm text-slate-600">A formal methods paper describing the registry is in preparation and will be the canonical citation upon publication.</p>
+
+  <h2 class="text-xl font-semibold mt-8 navy">Contributing</h2>
+  <p>Suggestions, corrections, and new-entry submissions are welcome via GitHub pull request. Each contribution must include a verifiable source URL and meet the inclusion criteria above.</p>
+
+</main>
+
+<footer class="mt-12 border-t bg-slate-50">
+  <div class="max-w-4xl mx-auto px-4 py-6 text-xs text-slate-500">
+    OncologyAI Registry · Independent project · CC BY 4.0
+  </div>
+</footer>
+
+</body>
+</html>

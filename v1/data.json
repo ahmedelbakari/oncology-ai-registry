@@ -1,0 +1,620 @@
+{
+  "schema_version": "0.1",
+  "last_updated": "2026-04-20",
+  "curator": "Ahmed Elbakri",
+  "license": "CC BY 4.0",
+  "entries": [
+    {
+      "id": "vesta-bcg",
+      "product_name": "Vesta Bladder BCGPredict",
+      "company": "Valar Labs",
+      "company_url": "https://www.valarlabs.com/",
+      "cancer_types": ["bladder"],
+      "modality": "histopathology",
+      "intended_use": "Predicts patient response to intravesical BCG immunotherapy in high-risk non-muscle-invasive bladder cancer (NMIBC) from H&E whole-slide images.",
+      "regulatory": {
+        "fda_status": "Breakthrough Device Designation",
+        "fda_pathway": "breakthrough_device",
+        "fda_decision_date": "2026-03",
+        "ldt": true,
+        "ny_clep": "cleared",
+        "cap_accredited": true,
+        "clia_certified": true
+      },
+      "clinical_evidence": {
+        "key_publication": "Predicting Response to Intravesical BCG in High-Risk NMIBC Using an AI-Powered Pathology Assay",
+        "journal": "The Journal of Urology",
+        "year": 2024,
+        "url": "https://www.auajournals.org/doi/10.1097/JU.0000000000003998"
+      },
+      "deployment": {
+        "available": true,
+        "us_cancer_centers_estimated": "50+",
+        "patients_estimated": "5000+",
+        "partners": ["PathNet Lab", "Acupath Laboratories", "Lumea"]
+      },
+      "sources": [
+        {"type": "press", "url": "https://www.businesswire.com/news/home/20240501832149/en/", "date_accessed": "2026-04-20"},
+        {"type": "press", "url": "https://www.businesswire.com/news/home/20251222693315/en/", "date_accessed": "2026-04-20"},
+        {"type": "press", "url": "https://www.businesswire.com/news/home/20251203454319/en/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "vesta-risk-stratify",
+      "product_name": "Vesta Bladder Risk Stratify",
+      "company": "Valar Labs",
+      "company_url": "https://www.valarlabs.com/",
+      "cancer_types": ["bladder"],
+      "modality": "histopathology",
+      "intended_use": "Personalized risk assessment for recurrence and progression in NMIBC patients.",
+      "regulatory": {
+        "fda_status": "LDT",
+        "fda_pathway": "ldt",
+        "ldt": true,
+        "ny_clep": "cleared",
+        "cap_accredited": true,
+        "clia_certified": true
+      },
+      "clinical_evidence": {
+        "key_publication": "CHAI Biomarkers Validated in High Grade Ta Bladder Cancer",
+        "journal": "European Urology",
+        "year": 2025,
+        "url": "https://www.businesswire.com/news/home/20250612200267/en/"
+      },
+      "deployment": {
+        "available": true,
+        "partners": ["PathNet Lab", "Acupath Laboratories", "Lumea"]
+      },
+      "sources": [
+        {"type": "press", "url": "https://www.businesswire.com/news/home/20250612200267/en/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "vitara-pancreas-chemopredict",
+      "product_name": "Vitara Pancreas ChemoPredict",
+      "company": "Valar Labs",
+      "company_url": "https://www.valarlabs.com/",
+      "cancer_types": ["pancreatic"],
+      "modality": "histopathology",
+      "intended_use": "Predicts chemotherapy response for advanced pancreatic cancer patients from routine pathology slides.",
+      "regulatory": {
+        "fda_status": "LDT",
+        "fda_pathway": "ldt",
+        "ldt": true,
+        "early_access_available": true
+      },
+      "clinical_evidence": {
+        "key_publication": "Pivotal Study Validating AI to Predict Chemotherapy Response for Pancreatic Cancer Patients",
+        "journal": "Journal of Clinical Oncology",
+        "year": 2026,
+        "url": "https://www.businesswire.com/news/home/20260210051551/en/"
+      },
+      "deployment": {"available": true, "early_access": true},
+      "sources": [
+        {"type": "press", "url": "https://www.businesswire.com/news/home/20260210051551/en/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "paige-prostate-detect",
+      "product_name": "Paige Prostate Detect",
+      "company": "Paige.AI",
+      "company_url": "https://paige.ai/",
+      "cancer_types": ["prostate"],
+      "modality": "histopathology",
+      "intended_use": "AI-based detection of prostate cancer foci in core needle biopsies; first FDA-authorized AI software for prostate cancer pathology.",
+      "regulatory": {
+        "fda_status": "De Novo authorized",
+        "fda_pathway": "de_novo",
+        "fda_decision_date": "2021-09",
+        "ldt": false
+      },
+      "clinical_evidence": {
+        "key_publication": "Validation of an AI-based solution for the detection of prostate cancer in core needle biopsies",
+        "journal": "Modern Pathology",
+        "year": 2021
+      },
+      "deployment": {"available": true, "fda_cleared": true},
+      "sources": [
+        {"type": "fda_db", "url": "https://www.accessdata.fda.gov/cdrh_docs/reviews/DEN200080.pdf", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "ibex-galen-prostate",
+      "product_name": "Galen Prostate",
+      "company": "Ibex Medical Analytics",
+      "company_url": "https://ibex-ai.com/",
+      "cancer_types": ["prostate"],
+      "modality": "histopathology",
+      "intended_use": "AI second-read for prostate cancer detection and grading in core needle biopsies.",
+      "regulatory": {
+        "fda_status": "De Novo authorized",
+        "fda_pathway": "de_novo",
+        "fda_decision_date": "2024-04",
+        "ce_marked": true
+      },
+      "clinical_evidence": {
+        "key_publication": "AI-based detection and grading of prostate cancer in biopsies",
+        "journal": "The Lancet Digital Health",
+        "year": 2020
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://ibex-ai.com/galen-prostate/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "ibex-galen-breast",
+      "product_name": "Galen Breast",
+      "company": "Ibex Medical Analytics",
+      "company_url": "https://ibex-ai.com/",
+      "cancer_types": ["breast"],
+      "modality": "histopathology",
+      "intended_use": "AI-based detection of invasive and in-situ breast carcinoma in core biopsies.",
+      "regulatory": {
+        "fda_status": "Research Use",
+        "ce_marked": true
+      },
+      "deployment": {"available": true, "primary_markets": ["EU", "UK"]},
+      "sources": [
+        {"type": "company", "url": "https://ibex-ai.com/galen-breast/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "lunit-insight-mmg",
+      "product_name": "Lunit INSIGHT MMG",
+      "company": "Lunit",
+      "company_url": "https://www.lunit.io/",
+      "cancer_types": ["breast"],
+      "modality": "radiology_mammography",
+      "intended_use": "AI-based detection of breast cancer in 2D mammograms.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2023-04",
+        "ce_marked": true
+      },
+      "clinical_evidence": {
+        "key_publication": "Stand-alone artificial intelligence for breast cancer detection in mammography",
+        "journal": "The Lancet Digital Health",
+        "year": 2020
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://www.lunit.io/en/products/insight-mmg", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "owkin-msintuit-crc",
+      "product_name": "MSIntuit CRC",
+      "company": "Owkin",
+      "company_url": "https://www.owkin.com/",
+      "cancer_types": ["colorectal"],
+      "modality": "histopathology",
+      "intended_use": "AI pre-screening for microsatellite instability (MSI) in colorectal cancer from H&E slides.",
+      "regulatory": {
+        "fda_status": "Research Use",
+        "ce_marked": true
+      },
+      "clinical_evidence": {
+        "key_publication": "MSIntuit CRC: clinical validation of an AI tool for pre-screening MSI in CRC",
+        "journal": "Nature Communications",
+        "year": 2023
+      },
+      "deployment": {"available": true, "primary_markets": ["EU"]},
+      "sources": [
+        {"type": "company", "url": "https://www.owkin.com/diagnostics/msintuit-crc", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "tempus-xt",
+      "product_name": "Tempus xT",
+      "company": "Tempus AI",
+      "company_url": "https://www.tempus.com/",
+      "cancer_types": ["solid_tumor", "pan_cancer"],
+      "modality": "genomic_sequencing_with_ai",
+      "intended_use": "Targeted next-generation sequencing assay (648 genes) with AI-driven clinical interpretation for solid tumors.",
+      "regulatory": {
+        "fda_status": "LDT",
+        "fda_pathway": "ldt",
+        "ldt": true,
+        "ny_clep": "cleared",
+        "cap_accredited": true,
+        "clia_certified": true
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://www.tempus.com/oncology/genomic-profiling/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "artera-prostate",
+      "product_name": "ArteraAI Prostate Test",
+      "company": "Artera",
+      "company_url": "https://artera.ai/",
+      "cancer_types": ["prostate"],
+      "modality": "histopathology",
+      "intended_use": "AI-derived multimodal prognostic and predictive test for localized prostate cancer to guide therapy intensification.",
+      "regulatory": {
+        "fda_status": "LDT",
+        "fda_pathway": "ldt",
+        "ldt": true,
+        "ny_clep": "cleared",
+        "cap_accredited": true,
+        "clia_certified": true,
+        "medicare_coverage": true
+      },
+      "clinical_evidence": {
+        "key_publication": "Development and validation of a multimodal AI biomarker for prostate cancer therapy personalization",
+        "journal": "NEJM Evidence",
+        "year": 2022
+      },
+      "deployment": {"available": true, "us_adoption": "broad"},
+      "sources": [
+        {"type": "company", "url": "https://artera.ai/test/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "deephealth-saige-q",
+      "product_name": "Saige-Q",
+      "company": "DeepHealth (RadNet)",
+      "company_url": "https://www.deephealth.com/",
+      "cancer_types": ["breast"],
+      "modality": "radiology_mammography",
+      "intended_use": "AI worklist triage for screening mammography.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k"
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://www.deephealth.com/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "kheiron-mia",
+      "product_name": "Mia",
+      "company": "Kheiron Medical Technologies",
+      "company_url": "https://www.kheironmed.com/",
+      "cancer_types": ["breast"],
+      "modality": "radiology_mammography",
+      "intended_use": "AI second reader for breast cancer detection in mammography.",
+      "regulatory": {
+        "fda_status": "Research Use",
+        "ce_marked": true
+      },
+      "deployment": {"available": true, "primary_markets": ["UK", "EU"]},
+      "sources": [
+        {"type": "company", "url": "https://www.kheironmed.com/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "icad-profound-ai-dbt",
+      "product_name": "ProFound AI for DBT",
+      "company": "iCAD",
+      "company_url": "https://www.icadmed.com/",
+      "cancer_types": ["breast"],
+      "modality": "radiology_mammography",
+      "intended_use": "AI detection and classification of suspicious findings in digital breast tomosynthesis (3D mammography).",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2018-12"
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://www.icadmed.com/profound-ai.html", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "icad-profound-risk",
+      "product_name": "ProFound AI Risk",
+      "company": "iCAD",
+      "company_url": "https://www.icadmed.com/",
+      "cancer_types": ["breast"],
+      "modality": "radiology_mammography",
+      "intended_use": "Short-term (1-3 year) individualized breast cancer risk estimation from mammography images.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k"
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://www.icadmed.com/profound-ai-risk.html", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "screenpoint-transpara",
+      "product_name": "Transpara",
+      "company": "ScreenPoint Medical",
+      "company_url": "https://screenpoint-medical.com/",
+      "cancer_types": ["breast"],
+      "modality": "radiology_mammography",
+      "intended_use": "AI concurrent-read and triage support for 2D and 3D mammography.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "ce_marked": true
+      },
+      "clinical_evidence": {
+        "key_publication": "Can we reduce the workload of mammographic screening by automatic identification of normal exams with AI?",
+        "journal": "Radiology",
+        "year": 2019
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://screenpoint-medical.com/transpara/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "volpara-scorecard",
+      "product_name": "Volpara Scorecard",
+      "company": "Volpara Health",
+      "company_url": "https://www.volparahealth.com/",
+      "cancer_types": ["breast"],
+      "modality": "radiology_mammography",
+      "intended_use": "Automated volumetric breast density assessment and quality metrics for mammography.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k"
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://www.volparahealth.com/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "therapixel-mammoscreen",
+      "product_name": "MammoScreen",
+      "company": "Therapixel",
+      "company_url": "https://www.therapixel.com/",
+      "cancer_types": ["breast"],
+      "modality": "radiology_mammography",
+      "intended_use": "AI detection and scoring of suspicious findings in 2D mammography.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "ce_marked": true
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://www.therapixel.com/mammoscreen/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "whiterabbit-wrdensity",
+      "product_name": "WRDensity",
+      "company": "Whiterabbit.ai",
+      "company_url": "https://www.whiterabbit.ai/",
+      "cancer_types": ["breast"],
+      "modality": "radiology_mammography",
+      "intended_use": "Automated breast density assessment from mammography images.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k"
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://www.whiterabbit.ai/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "riverain-clearread-ct",
+      "product_name": "ClearRead CT",
+      "company": "Riverain Technologies",
+      "company_url": "https://www.riveraintech.com/",
+      "cancer_types": ["lung"],
+      "modality": "radiology_ct",
+      "intended_use": "AI detection of pulmonary nodules on chest CT with vessel suppression.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k"
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://www.riveraintech.com/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "annalise-cxr",
+      "product_name": "Annalise CXR",
+      "company": "Annalise.ai",
+      "company_url": "https://annalise.ai/",
+      "cancer_types": ["lung"],
+      "modality": "radiology_cxr",
+      "intended_use": "AI detection of multiple chest X-ray findings including suspicious pulmonary lesions and nodules.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "ce_marked": true
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://annalise.ai/solutions/annalise-enterprise/cxr/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "aidoc-oncology",
+      "product_name": "Aidoc BriefCase — Incidental Oncology Findings",
+      "company": "Aidoc",
+      "company_url": "https://www.aidoc.com/",
+      "cancer_types": ["lung", "pan_cancer"],
+      "modality": "radiology_ct",
+      "intended_use": "AI triage and notification for incidental findings suggestive of malignancy (e.g., pulmonary nodules) on CT.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k"
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://www.aidoc.com/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "signatera-mrd",
+      "product_name": "Signatera",
+      "company": "Natera",
+      "company_url": "https://www.natera.com/oncology/",
+      "cancer_types": ["colorectal", "breast", "bladder", "lung", "pan_cancer"],
+      "modality": "liquid_biopsy",
+      "intended_use": "Personalized, tumor-informed ctDNA assay for minimal residual disease (MRD) detection and recurrence monitoring.",
+      "regulatory": {
+        "fda_status": "LDT",
+        "fda_pathway": "ldt",
+        "ldt": true,
+        "ny_clep": "cleared",
+        "cap_accredited": true,
+        "clia_certified": true,
+        "medicare_coverage": true
+      },
+      "clinical_evidence": {
+        "key_publication": "Circulating tumor DNA analysis guiding adjuvant therapy in stage II colon cancer",
+        "journal": "New England Journal of Medicine",
+        "year": 2022
+      },
+      "deployment": {"available": true, "us_adoption": "broad"},
+      "sources": [
+        {"type": "company", "url": "https://www.natera.com/oncology/signatera-advanced-cancer-detection/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "guardant360-cdx",
+      "product_name": "Guardant360 CDx",
+      "company": "Guardant Health",
+      "company_url": "https://guardanthealth.com/",
+      "cancer_types": ["solid_tumor", "pan_cancer"],
+      "modality": "liquid_biopsy",
+      "intended_use": "FDA-approved comprehensive genomic profiling liquid biopsy companion diagnostic for solid tumors.",
+      "regulatory": {
+        "fda_status": "PMA approved",
+        "fda_pathway": "pma",
+        "fda_decision_date": "2020-08",
+        "medicare_coverage": true
+      },
+      "deployment": {"available": true, "us_adoption": "broad"},
+      "sources": [
+        {"type": "fda_db", "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P200010", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "foundationone-cdx",
+      "product_name": "FoundationOne CDx",
+      "company": "Foundation Medicine (Roche)",
+      "company_url": "https://www.foundationmedicine.com/",
+      "cancer_types": ["solid_tumor", "pan_cancer"],
+      "modality": "genomic_sequencing_with_ai",
+      "intended_use": "FDA-approved comprehensive tissue-based genomic profiling companion diagnostic for solid tumors.",
+      "regulatory": {
+        "fda_status": "PMA approved",
+        "fda_pathway": "pma",
+        "fda_decision_date": "2017-11",
+        "medicare_coverage": true
+      },
+      "deployment": {"available": true, "us_adoption": "broad"},
+      "sources": [
+        {"type": "fda_db", "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P170019", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "caris-assure",
+      "product_name": "Caris Assure",
+      "company": "Caris Life Sciences",
+      "company_url": "https://www.carislifesciences.com/",
+      "cancer_types": ["solid_tumor", "pan_cancer"],
+      "modality": "liquid_biopsy",
+      "intended_use": "Blood-based pan-tumor molecular profiling with AI-driven biomarker interpretation.",
+      "regulatory": {
+        "fda_status": "LDT",
+        "fda_pathway": "ldt",
+        "ldt": true,
+        "clia_certified": true
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://www.carislifesciences.com/products-and-services/molecular-profiling/caris-assure/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "proscia-concentriq-ai",
+      "product_name": "Concentriq AI",
+      "company": "Proscia",
+      "company_url": "https://proscia.com/",
+      "cancer_types": ["prostate", "dermatopathology"],
+      "modality": "histopathology",
+      "intended_use": "Digital pathology workflow platform with embedded AI applications including DermAI and prostate grading support.",
+      "regulatory": {
+        "fda_status": "Research Use",
+        "ce_marked": true
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://proscia.com/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "indica-halo-ai",
+      "product_name": "HALO AI",
+      "company": "Indica Labs",
+      "company_url": "https://indicalab.com/",
+      "cancer_types": ["pan_cancer"],
+      "modality": "histopathology",
+      "intended_use": "Deep-learning image analysis platform for research-use tissue and cell quantification in oncology.",
+      "regulatory": {
+        "fda_status": "Research Use"
+      },
+      "deployment": {"available": true, "us_adoption": "research_and_pharma"},
+      "sources": [
+        {"type": "company", "url": "https://indicalab.com/halo-ai/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "visiopharm-oncotopix",
+      "product_name": "Oncotopix Discovery",
+      "company": "Visiopharm",
+      "company_url": "https://visiopharm.com/",
+      "cancer_types": ["pan_cancer"],
+      "modality": "histopathology",
+      "intended_use": "AI-based digital pathology image analysis for biomarker quantification across tumor types (IHC, H&E).",
+      "regulatory": {
+        "fda_status": "Research Use",
+        "ce_marked": true
+      },
+      "deployment": {"available": true},
+      "sources": [
+        {"type": "company", "url": "https://visiopharm.com/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "aignostics-raptor",
+      "product_name": "RAPTOR",
+      "company": "Aignostics",
+      "company_url": "https://www.aignostics.com/",
+      "cancer_types": ["pan_cancer"],
+      "modality": "histopathology",
+      "intended_use": "Foundation-model-based computational pathology platform for biomarker discovery and pathologist-grade annotation.",
+      "regulatory": {
+        "fda_status": "Research Use"
+      },
+      "deployment": {"available": true, "us_adoption": "research_and_pharma"},
+      "sources": [
+        {"type": "company", "url": "https://www.aignostics.com/", "date_accessed": "2026-04-20"}
+      ]
+    },
+    {
+      "id": "aiforia-breast",
+      "product_name": "Aiforia Clinical Breast",
+      "company": "Aiforia Technologies",
+      "company_url": "https://www.aiforia.com/",
+      "cancer_types": ["breast"],
+      "modality": "histopathology",
+      "intended_use": "AI-based assistive analysis of breast IHC and H&E slides including Ki-67, HER2, and other biomarkers.",
+      "regulatory": {
+        "fda_status": "Research Use",
+        "ce_marked": true
+      },
+      "deployment": {"available": true, "primary_markets": ["EU"]},
+      "sources": [
+        {"type": "company", "url": "https://www.aiforia.com/", "date_accessed": "2026-04-20"}
+      ]
+    }
+  ]
+}
