@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "last_updated": "2026-04-20",
+  "last_updated": "2026-04-21",
   "curator": "Ahmed Elbakri",
   "license": "CC BY 4.0",
   "entries": [
@@ -1756,9 +1756,10 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": null,
+        "fda_decision_date": "2025-06-26",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K243391"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -1921,10 +1922,11 @@
       "modality": "histopathology",
       "intended_use": "AI-assisted quantification of HER2 immunohistochemistry for breast cancer therapy selection.",
       "regulatory": {
-        "fda_status": "LDT",
-        "fda_pathway": "ldt",
+        "fda_status": "Research Use",
+        "fda_pathway": "research_use",
         "ldt": true,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_decision_date": null
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -1960,9 +1962,10 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": null,
+        "fda_decision_date": "2007-01-10",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K061613"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2182,11 +2185,12 @@
       "modality": "radiology_ct",
       "intended_use": "FDA-authorized AI risk score for indeterminate pulmonary nodules on chest CT to support lung cancer diagnostic workup decisions.",
       "regulatory": {
-        "fda_status": "De Novo authorized",
-        "fda_pathway": "de_novo",
-        "fda_decision_date": "2021-10",
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2021-03-05",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K202300"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2271,9 +2275,10 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": null,
+        "fda_decision_date": "2020-07-02",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K192880"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2315,9 +2320,10 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": null,
+        "fda_decision_date": "2019-07-26",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K183271"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2358,9 +2364,10 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": null,
+        "fda_decision_date": "2011-03-07",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K103480"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2478,11 +2485,13 @@
       "modality": "radiology_ct",
       "intended_use": "FDA-authorized AI-based computer-assisted detection (CADe) of colonic mucosal lesions suspicious for polyps during real-time colonoscopy.",
       "regulatory": {
-        "fda_status": "De Novo authorized",
-        "fda_pathway": "de_novo",
-        "fda_decision_date": "2021-04",
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2021-04-09",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K211951",
+        "fda_de_novo_number": "DEN200055"
       },
       "clinical_evidence": {
         "key_publication": "Artificial Intelligence and Colonoscopy Experience: Lessons from Two Randomised Trials",
@@ -2525,7 +2534,8 @@
         "fda_pathway": "510k",
         "fda_decision_date": "2022-07",
         "ldt": false,
-        "ce_marked": false
+        "ce_marked": false,
+        "fda_510k_number": "K213686"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2565,9 +2575,10 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": null,
+        "fda_decision_date": "2023-07-25",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K223473"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2608,9 +2619,10 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": null,
+        "fda_decision_date": "2023-12-15",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K230751"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2652,9 +2664,10 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": null,
+        "fda_decision_date": "2018-02-23",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K170540"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2696,9 +2709,10 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": null,
+        "fda_decision_date": "2022-05-12",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K220105"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2741,7 +2755,8 @@
         "fda_pathway": "510k",
         "fda_decision_date": "2018-09",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K182336"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2784,9 +2799,10 @@
       "regulatory": {
         "fda_status": "PMA approved",
         "fda_pathway": "pma",
-        "fda_decision_date": null,
+        "fda_decision_date": "2019-10-23",
         "ldt": false,
-        "medicare_coverage": true
+        "medicare_coverage": true,
+        "fda_pma_number": "P190014"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2860,11 +2876,13 @@
       "modality": "genomic_sequencing_with_ai",
       "intended_use": "FDA-cleared 70-gene expression signature for recurrence risk stratification in early-stage breast cancer.",
       "regulatory": {
-        "fda_status": "510(k) cleared",
-        "fda_pathway": "510k",
-        "fda_decision_date": "2007-02",
+        "fda_status": "De Novo authorized",
+        "fda_pathway": "de_novo",
+        "fda_decision_date": "2007-02-06",
         "ldt": false,
-        "medicare_coverage": true
+        "medicare_coverage": true,
+        "fda_510k_number": "K070675",
+        "fda_de_novo_number": "DEN070009"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -2941,9 +2959,10 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": null,
+        "fda_decision_date": "2013-09-06",
         "ldt": false,
-        "medicare_coverage": true
+        "medicare_coverage": true,
+        "fda_510k_number": "K130010"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -3128,7 +3147,8 @@
         "fda_pathway": "pma",
         "fda_decision_date": "2024-10",
         "ldt": false,
-        "medicare_coverage": true
+        "medicare_coverage": true,
+        "fda_pma_number": "P230043"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -3170,7 +3190,8 @@
         "fda_pathway": "pma",
         "fda_decision_date": "2024-07",
         "ldt": false,
-        "medicare_coverage": true
+        "medicare_coverage": true,
+        "fda_pma_number": "P230009"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -3208,8 +3229,8 @@
       "modality": "liquid_biopsy",
       "intended_use": "Multiomics cell-free DNA blood-based colorectal cancer screening assay evaluated in the PREEMPT-CRC pivotal study.",
       "regulatory": {
-        "fda_status": "De Novo authorized",
-        "fda_pathway": "de_novo",
+        "fda_status": "Research Use",
+        "fda_pathway": "research_use",
         "fda_decision_date": null,
         "ldt": false,
         "medicare_coverage": null
@@ -3280,11 +3301,12 @@
       "modality": "histopathology",
       "intended_use": "FDA-cleared AI-based digital cytology system to assist the review of cervical cytology slides collected in liquid-based Pap tests.",
       "regulatory": {
-        "fda_status": "510(k) cleared",
-        "fda_pathway": "510k",
-        "fda_decision_date": null,
+        "fda_status": "De Novo authorized",
+        "fda_pathway": "de_novo",
+        "fda_decision_date": "2024-01-31",
         "ldt": false,
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_de_novo_number": "DEN210035"
       },
       "clinical_evidence": {
         "key_publication": null,
@@ -3325,8 +3347,9 @@
       "regulatory": {
         "fda_status": "PMA approved",
         "fda_pathway": "pma",
-        "fda_decision_date": null,
-        "ldt": false
+        "fda_decision_date": "2008-12-03",
+        "ldt": false,
+        "fda_pma_number": "P950009"
       },
       "clinical_evidence": {
         "key_publication": null,
