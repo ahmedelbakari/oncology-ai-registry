@@ -1,6 +1,6 @@
 {
   "schema_version": "0.1",
-  "last_updated": "2026-04-21",
+  "last_updated": "2026-04-22",
   "curator": "Ahmed Elbakri",
   "license": "CC BY 4.0",
   "entries": [
@@ -144,8 +144,9 @@
       "regulatory": {
         "fda_status": "De Novo authorized",
         "fda_pathway": "de_novo",
-        "fda_decision_date": "2021-09",
-        "ldt": false
+        "fda_decision_date": "2021-09-21",
+        "ldt": false,
+        "fda_de_novo_number": "DEN200080"
       },
       "clinical_evidence": {
         "key_publication": "Validation of an AI-based solution for the detection of prostate cancer in core needle biopsies",
@@ -302,12 +303,14 @@
       "modality": "genomic_sequencing_with_ai",
       "intended_use": "Targeted next-generation sequencing assay (648 genes) with AI-driven clinical interpretation for solid tumors.",
       "regulatory": {
-        "fda_status": "LDT",
-        "fda_pathway": "ldt",
+        "fda_status": "PMA approved",
+        "fda_pathway": "pma",
         "ldt": true,
         "ny_clep": "cleared",
         "cap_accredited": true,
-        "clia_certified": true
+        "clia_certified": true,
+        "fda_pma_number": "P210011",
+        "fda_decision_date": "2023-04-28"
       },
       "deployment": {
         "available": true
@@ -331,13 +334,15 @@
       "modality": "histopathology",
       "intended_use": "AI-derived multimodal prognostic and predictive test for localized prostate cancer to guide therapy intensification.",
       "regulatory": {
-        "fda_status": "LDT",
-        "fda_pathway": "ldt",
+        "fda_status": "De Novo authorized",
+        "fda_pathway": "de_novo",
         "ldt": true,
         "ny_clep": "cleared",
         "cap_accredited": true,
         "clia_certified": true,
-        "medicare_coverage": true
+        "medicare_coverage": true,
+        "fda_de_novo_number": "DEN240068",
+        "fda_decision_date": "2025-07-31"
       },
       "clinical_evidence": {
         "key_publication": "Development and validation of a multimodal AI biomarker for prostate cancer therapy personalization",
@@ -393,7 +398,9 @@
       "intended_use": "AI second reader for breast cancer detection in mammography.",
       "regulatory": {
         "fda_status": "Research Use",
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_pathway": "research_use",
+        "fda_decision_date": null
       },
       "deployment": {
         "available": true,
@@ -555,7 +562,9 @@
       "intended_use": "Automated breast density assessment from mammography images.",
       "regulatory": {
         "fda_status": "510(k) cleared",
-        "fda_pathway": "510k"
+        "fda_pathway": "510k",
+        "fda_510k_number": "K202013",
+        "fda_decision_date": "2020-10-30"
       },
       "deployment": {
         "available": true
@@ -606,7 +615,9 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_510k_number": "K213941",
+        "fda_decision_date": "2022-02-24"
       },
       "deployment": {
         "available": true
@@ -728,8 +739,9 @@
       "regulatory": {
         "fda_status": "PMA approved",
         "fda_pathway": "pma",
-        "fda_decision_date": "2017-11",
-        "medicare_coverage": true
+        "fda_decision_date": "2017-11-30",
+        "medicare_coverage": true,
+        "fda_pma_number": "P170019"
       },
       "deployment": {
         "available": true,
@@ -784,7 +796,10 @@
       "intended_use": "Digital pathology workflow platform with embedded AI applications including DermAI and prostate grading support.",
       "regulatory": {
         "fda_status": "Research Use",
-        "ce_marked": true
+        "ce_marked": true,
+        "fda_pathway": "research_use",
+        "fda_510k_number": "K230839",
+        "fda_decision_date": "2024-02-08"
       },
       "deployment": {
         "available": true
@@ -913,7 +928,9 @@
       "regulatory": {
         "fda_status": "De Novo authorized",
         "fda_pathway": "de_novo",
-        "fda_decision_date": "2017-07"
+        "fda_decision_date": "2017-07-19",
+        "fda_510k_number": "K170195",
+        "fda_de_novo_number": "DEN170022"
       },
       "deployment": {
         "available": true
@@ -939,7 +956,8 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": "2019-03"
+        "fda_decision_date": "2019-03-08",
+        "fda_510k_number": "K183285"
       },
       "deployment": {
         "available": true
@@ -990,7 +1008,9 @@
       "intended_use": "AI-based decision support for breast ultrasound lesion characterization (BI-RADS concordance).",
       "regulatory": {
         "fda_status": "510(k) cleared",
-        "fda_pathway": "510k"
+        "fda_pathway": "510k",
+        "fda_510k_number": "K190442",
+        "fda_decision_date": "2019-07-03"
       },
       "deployment": {
         "available": true
@@ -1114,8 +1134,9 @@
       "modality": "histopathology",
       "intended_use": "AI-based detection of metastatic breast cancer in lymph node H&E sections.",
       "regulatory": {
-        "fda_status": "510(k) cleared",
-        "fda_pathway": "510k"
+        "fda_status": "Breakthrough Device Designation",
+        "fda_pathway": "breakthrough_device",
+        "fda_decision_date": null
       },
       "deployment": {
         "available": true
@@ -1554,8 +1575,9 @@
       "regulatory": {
         "fda_status": "PMA approved",
         "fda_pathway": "pma",
-        "fda_decision_date": "2020-08",
-        "medicare_coverage": true
+        "fda_decision_date": "2020-08-26",
+        "medicare_coverage": true,
+        "fda_pma_number": "P190032"
       },
       "deployment": {
         "available": true,
@@ -1631,7 +1653,9 @@
       "intended_use": "Comprehensive AI detection of non-contrast CT brain findings including suspected neoplasm.",
       "regulatory": {
         "fda_status": "510(k) cleared",
-        "fda_pathway": "510k"
+        "fda_pathway": "510k",
+        "fda_510k_number": "K231094",
+        "fda_decision_date": "2023-08-15"
       },
       "deployment": {
         "available": true
@@ -1684,10 +1708,12 @@
       "modality": "genomic_sequencing_with_ai",
       "intended_use": "RNA sequencing companion to xT with AI-driven fusion detection and clinical interpretation.",
       "regulatory": {
-        "fda_status": "LDT",
-        "fda_pathway": "ldt",
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
         "ldt": true,
-        "clia_certified": true
+        "clia_certified": true,
+        "fda_510k_number": "K241868",
+        "fda_decision_date": "2025-09-19"
       },
       "deployment": {
         "available": true
