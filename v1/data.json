@@ -15,9 +15,8 @@
       "modality": "histopathology",
       "intended_use": "Predicts patient response to intravesical BCG immunotherapy in high-risk non-muscle-invasive bladder cancer (NMIBC) from H&E whole-slide images.",
       "regulatory": {
-        "fda_status": "Breakthrough Device Designation",
-        "fda_pathway": "breakthrough_device",
-        "fda_decision_date": "2026-03",
+        "fda_status": "LDT",
+        "fda_pathway": "ldt",
         "ldt": true,
         "ny_clep": "cleared",
         "cap_accredited": true,
