@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medihub Prostate — OncologyAI Registry</title>
+  <meta name="description" content="Image processing software for outlining, processing, viewing, and editing of prostate MR images. AI semi-automatically outlines the prostate gland based on MRI by contour for total-volume calculation; AI functionality is limited to total prostate volume — it does not segment lesions. Edited PI-RADS report and semi-annotated prostate region are presented to user. Intended for trained radiologists and urologists. Validated for Siemens 3T Vida and Skyra MRI, slice thickness ≥3mm, patients aged 55+.">
+  <link rel="canonical" href="https://oncologyairegistry.org/tools/jlk-medihub-prostate.html">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; }
+    .navy { color: #1F3A5F; }
+    .navy-bg { background-color: #1F3A5F; }
+    .badge { display: inline-block; padding: 0.15em 0.55em; border-radius: 0.35em; font-size: 0.72em; font-weight: 600; }
+  </style>
+</head>
+<body class="bg-white text-slate-900">
+
+<header class="border-b">
+  <div class="max-w-4xl mx-auto px-4 py-5 flex items-center justify-between">
+    <div>
+      <a href="../index.html" class="text-2xl font-bold navy">OncologyAI Registry</a>
+      <div class="text-xs text-slate-500">Public, curated registry of AI diagnostics in oncology</div>
+    </div>
+    <nav class="text-sm text-slate-600 space-x-4">
+      <a href="../index.html" class="hover:underline">Registry</a>
+      <a href="../methodology.html" class="hover:underline">Methodology</a>
+      <a href="../about.html" class="hover:underline">About</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-4xl mx-auto px-4 py-10">
+  <div class="text-xs text-slate-500"><a href="../index.html" class="hover:underline">← Back to registry</a></div>
+  <h1 class="text-3xl font-bold navy mt-2">Medihub Prostate</h1>
+  <div class="mt-1 text-slate-600">
+    <a href="https://jlkgroup.com/en/" class="hover:underline">JLK Inc.</a>
+  </div>
+  <div class="mt-3 flex flex-wrap gap-2 text-xs">
+    <span class="badge bg-slate-100 text-slate-700">MRI</span>
+    <span class="badge bg-slate-100 text-slate-700">prostate</span>
+  </div>
+  <p class="mt-4 text-slate-700">Image processing software for outlining, processing, viewing, and editing of prostate MR images. AI semi-automatically outlines the prostate gland based on MRI by contour for total-volume calculation; AI functionality is limited to total prostate volume — it does not segment lesions. Edited PI-RADS report and semi-annotated prostate region are presented to user. Intended for trained radiologists and urologists. Validated for Siemens 3T Vida and Skyra MRI, slice thickness ≥3mm, patients aged 55+.</p>
+
+  <section class="mt-8"><h2 class="text-xl font-bold navy">Regulatory</h2><table class="w-full mt-3"><tbody><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">Regulatory status</td><td class="px-3 py-2 text-sm"><span class="badge bg-emerald-100 text-emerald-800">510(k) cleared</span></td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">FDA submission pathway</td><td class="px-3 py-2 text-sm">510(k)</td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">FDA decision date</td><td class="px-3 py-2 text-sm">2024-06-21</td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">FDA 510(k) number</td><td class="px-3 py-2 text-sm">K233196</td></tr></tbody></table></section>
+  <section class="mt-8"><h2 class="text-xl font-bold navy">Validation summary</h2><div class="mt-3"><div class="rounded border border-slate-300 bg-slate-50 text-slate-700 text-sm px-3 py-2 mb-4">Partial validation summary — some fields are still unverified. See limitations note below.</div><table class="w-full"><tbody><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">Study design</td><td class="px-3 py-2 text-sm">Retrospective</td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">Cohort size</td><td class="px-3 py-2 text-sm">114 patients; 114 samples — Clinical Testing (Stand-alone Performance): 114 T2 MR images from University of Missouri Hospital (single US site). Ground truth from consensus of three expert radiologists with majority-rule resolution. Reader performance subset (Phase II) used three expert radiologists.</td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">Number of sites</td><td class="px-3 py-2 text-sm">1</td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">Site geography</td><td class="px-3 py-2 text-sm">Single center (US)</td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">Comparator</td><td class="px-3 py-2 text-sm">Pathologist consensus</td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">Primary endpoint</td><td class="px-3 py-2 text-sm">concordance</td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">Primary result</td><td class="px-3 py-2 text-sm">Standalone segmentation: mean Dice coefficient 0.928 (95% CI 0.925, 0.931); Hausdorff distance 2.171 (95% CI 1.097, 3.245), exceeding pre-specified pass criterion of mean Dice &gt;0.894. Reader study: Dice-coefficient improvements when radiologists used Medihub Prostate were +0.156, +0.011, +0.008 for the three readers (all improved). No cancer-detection sensitivity/specificity reported (algorithm does not detect lesions).</td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">External validation</td><td class="px-3 py-2 text-sm">No</td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">Peer-reviewed</td><td class="px-3 py-2 text-sm">No</td></tr><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">FDA decision summary</td><td class="px-3 py-2 text-sm"><a class="navy hover:underline" href="https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233196.pdf">View on accessdata.fda.gov</a></td></tr></tbody></table><h3 class="mt-6 mb-2 text-sm uppercase tracking-wide text-slate-500">Limitations noted</h3><p class="text-sm text-slate-700">[Source-detail preserved: Study design: Single-center; Primary endpoint (original): dice_coefficient] (i) AI is for prostate-gland volume/segmentation only — does NOT detect or segment lesions; (ii) test set comes from same institutional source as training data (&#x27;Study Population Dataset is the same as algorithm development dataset&#x27;), so this is internal validation, not true external; (iii) only validated for Siemens 3T Vida and Skyra; (iv) only tested in patients aged 55+ (114/114 male); (v) no peer-reviewed pivotal publication identified; (vi) only 7 African American and 1 Asian subject in test set — very limited racial diversity.</p></div></section>
+  <section class="mt-8"><h2 class="text-xl font-bold navy">Deployment</h2><table class="w-full mt-3"><tbody><tr class="border-t border-slate-200"><td class="px-3 py-2 text-slate-500 text-xs uppercase tracking-wide w-56">Available</td><td class="px-3 py-2 text-sm">Yes</td></tr></tbody></table></section>
+  <section class="mt-8"><h2 class="text-xl font-bold navy">Sources</h2><ul class="text-sm mt-3"><li class="mb-1"><a class="navy hover:underline" href="https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233196.pdf">https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233196.pdf</a><span class="text-xs text-slate-500"> · fda_db · 2026-05-12</span></li></ul></section>
+
+  <section class="mt-10 border-t pt-6 text-sm text-slate-600">
+    <div class="font-semibold text-slate-700 mb-1">How to cite this entry</div>
+    <code class="block bg-slate-50 p-3 rounded text-xs">Elbakri A. OncologyAI Registry: Medihub Prostate. Available at: https://oncologyairegistry.org/tools/jlk-medihub-prostate.html. Accessed [date].</code>
+  </section>
+</main>
+
+<footer class="mt-12 border-t bg-slate-50">
+  <div class="max-w-4xl mx-auto px-4 py-8 text-xs text-slate-500 flex flex-wrap justify-between gap-2">
+    <div>OncologyAI Registry · last updated 2026-04-22 · CC BY 4.0</div>
+    <div>Curator: Ahmed Elbakri</div>
+  </div>
+</footer>
+
+</body>
+</html>

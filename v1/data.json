@@ -6005,6 +6005,669 @@
         "fda_summary_url": null,
         "data_completeness": "stub"
       }
+    },
+    {
+      "id": "seno-imagio-breast",
+      "product_name": "Imagio Breast Imaging System",
+      "company": "Seno Medical Instruments, Inc.",
+      "company_url": "https://senomedical.com/",
+      "cancer_types": [
+        "breast"
+      ],
+      "modality": "radiology_us",
+      "intended_use": "Evaluation of palpable and non-palpable breast abnormalities in adult patients referred for diagnostic imaging breast work-up. Fuses internal ultrasound (IUS) with opto-acoustic (OA) imaging; includes an AI-based decision-support classifier (SenoGram) to assist in BI-RADS assessment of BI-RADS 3-5 masses. Not a replacement for mammographic screening or definitive pathologic diagnosis.",
+      "regulatory": {
+        "fda_status": "PMA approved",
+        "fda_pathway": "pma",
+        "fda_decision_date": "2021-01-11",
+        "fda_pma_number": "P200003",
+        "ldt": false,
+        "ny_clep": null,
+        "cap_accredited": null,
+        "clia_certified": null,
+        "ce_marked": true
+      },
+      "deployment": {
+        "available": true
+      },
+      "sources": [
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/P200003B.pdf",
+          "date_accessed": "2026-05-12"
+        },
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfpma/pma.cfm?id=P200003",
+          "date_accessed": "2026-05-12"
+        },
+        {
+          "type": "publication",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/29178816/",
+          "date_accessed": "2026-05-12"
+        }
+      ],
+      "validation": {
+        "study_design": "prospective",
+        "cohort_size": {
+          "n_patients": 480,
+          "n_samples": 480,
+          "unit_note": "Reader-02 Pivotal MRMC Study read 480 masses (180 malignant + 300 benign/TPB/high-risk) drawn from the larger PIONEER ITD population of 1,739 subjects (PIONEER Safety Population N=1,972; total enrolled N=2,105). 15 independent readers, 4 blocks of 120 masses each. Each mass read twice: Read 1 (IUS+history+mammogram), Read 2 (Read 1 + OA + SenoGram)."
+        },
+        "n_sites": 16,
+        "site_geography": "multi_center_us",
+        "comparator": "predicate_device",
+        "primary_endpoint": "specificity",
+        "primary_result": "Primary endpoint MET. Specificity at fixed 98% sensitivity (fSp) — IUS+OA (Imagio): 47.2% (95% CI 35.9%, 58.5%); IUS alone: 38.2% (95% CI 24.9%, 51.6%); difference +9.0% (95% CI 1.0%, 17.0%), two-sided p=0.027. Secondary NLR mean 0.047 (95% CI 0.032, 0.062) for IUS+OA vs 0.053 (95% CI 0.037, 0.070) for IUS; relative NLR 0.896 (95% CI 0.693, 1.11) — NOT statistically significant, so per pre-specified sequential hierarchical testing, downstream PLR and pAUC reported as descriptive only.",
+        "external_validation": {
+          "performed": true,
+          "cohort_description": "PIONEER was a 16-site US prospective study (7 academic + 9 private practices) enrolling from December 2012 through September 2015; subjects referred for diagnostic ultrasound work-up of suspicious findings. Reader-02 readers were independent of any prior Seno study.",
+          "result": "Sites geographically distributed across the US; demographic spread by age, BI-RADS, breast density, palpability, menopausal status reported in SSED Table 3."
+        },
+        "peer_reviewed": true,
+        "key_publications": [
+          {
+            "title": "A Pivotal Study of Optoacoustic Imaging to Diagnose Benign and Malignant Breast Masses: A New Evaluation Tool for Radiologists",
+            "journal": "Radiology",
+            "year": 2018,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/29178816/",
+            "pivotal": true
+          },
+          {
+            "title": "Optoacoustic Imaging With Decision Support for Differentiation of Benign and Malignant Breast Masses: A 15-Reader Retrospective Study",
+            "journal": "Academic Radiology",
+            "year": 2022,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/36475811/",
+            "pivotal": false
+          }
+        ],
+        "limitations_noted": "[Source-detail preserved: Study design: Multi-center MRMC (multi-reader, multi-case); Primary endpoint (original): specificity_at_fixed_sensitivity] PMA SSED notes: (i) Reader-02 used a SUBSET (n=480) of the larger PIONEER ITD population (n=1,739) because an initial MRMC study had methodological issues and could not be submitted to FDA — Reader-02 was a re-do; (ii) prevalence of cancer in Reader-02 (~38%) was enriched/stratified, not reflective of typical clinical population; (iii) of secondary endpoints, only fSp was confirmatory — NLR, PLR, and pAUC results reported as descriptive only after NLR failed hierarchical testing; (iv) 7 SAEs in 5 subjects (none device-related); 11 procedure-related AEs in 10 subjects, all mild, including 1 second-degree burn attributed to contact dermatitis rather than laser; (v) device labeling: 'not intended to be used as a replacement for mammographic screening or for definitive pathologic diagnosis'; (vi) excluded male subjects, breast implants <12mo, mass >4cm, photosensitive disease.",
+        "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/P200003B.pdf",
+        "data_completeness": "full"
+      }
+    },
+    {
+      "id": "clarius-prostate-ai",
+      "product_name": "Clarius Prostate AI",
+      "company": "Clarius Mobile Health Corp.",
+      "company_url": "https://clarius.com/",
+      "cancer_types": [
+        "prostate"
+      ],
+      "modality": "radiology_us",
+      "intended_use": "Semi-automatic AI-based measurement of prostate volume on ultrasound (curvilinear and endo-cavitary probes) for adult male patients. Supports prostate cancer workflow (PSA density, biopsy planning) but is NOT a lesion-detection or cancer-detection tool.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2025-04-16",
+        "fda_510k_number": "K243853",
+        "ldt": false,
+        "ce_marked": null,
+        "ny_clep": null,
+        "cap_accredited": null,
+        "clia_certified": null
+      },
+      "deployment": {
+        "available": true
+      },
+      "sources": [
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243853.pdf",
+          "date_accessed": "2026-05-12"
+        }
+      ],
+      "validation": {
+        "study_design": "retrospective",
+        "cohort_size": {
+          "n_patients": 139,
+          "n_samples": 139,
+          "unit_note": "139 male subjects in the clinical verification (test) study. Test dataset entirely independent of training/tuning/internal-testing datasets per FDA summary."
+        },
+        "n_sites": null,
+        "site_geography": "multi_center_international",
+        "comparator": "pathologist_consensus",
+        "primary_endpoint": "other",
+        "primary_result": "Non-inferiority of Clarius Prostate AI prostate-volume measurement to mean of human expert reviewers met (p-value 1.146e-5, equivalence margin 22%). Mean difference of absolute percent differences (Clarius vs expert mean) 0.1192 (95% CI 0.0738, 0.1646). View prediction accuracy 95%. ICC: endo-cavitary probes (EC7 HD3) 0.87; curvilinear probes (C3 HD3) 0.67.",
+        "external_validation": {
+          "performed": true,
+          "cohort_description": "Ultrasound images randomly obtained from anonymized multi-center database from the United States, Canada, Peru, United Kingdom, Germany, Argentina, Jamaica, Barbados, Greece, Bulgaria, and Italy. Institutions used in training/tuning/internal testing were EXCLUDED from this study.",
+          "result": "Majority of patients from US-based institutions; multiple ethnicities and ages represented per FDA summary."
+        },
+        "peer_reviewed": false,
+        "key_publications": [],
+        "limitations_noted": "[Source-detail preserved: Study design: Multi-center; Primary endpoint (original): non_inferiority_volume_measurement] (i) Device is for prostate VOLUME measurement only — does not detect cancer or lesions; (ii) lower ICC for curvilinear probes (0.67) vs endo-cavitary (0.87) per FDA summary 'highlighting expected variations in performance'; (iii) exact site count not disclosed; (iv) no peer-reviewed pivotal publication identified.",
+        "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K243853.pdf",
+        "data_completeness": "partial"
+      }
+    },
+    {
+      "id": "quibim-qp-prostate",
+      "product_name": "QP-Prostate CAD",
+      "company": "Quibim S.L.",
+      "company_url": "https://quibim.com/",
+      "cancer_types": [
+        "prostate"
+      ],
+      "modality": "radiology_mri",
+      "intended_use": "Radiological CADe/CADx software that automatically detects and identifies suspected lesions for clinically significant prostate cancer (csPCa; Gleason ≥7) on bi-parametric prostate MRI (T2w + DWI). Outputs include 3D prostate gland segmentation and DICOM overlay markings of suspected lesions in two suspicion levels (moderate/high). For physicians qualified to read and interpret prostate MRI per ACR PI-RADS recommendations. Patients above 40 years.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2025-03-18",
+        "fda_510k_number": "K242683",
+        "ldt": false,
+        "ce_marked": true,
+        "ny_clep": null,
+        "cap_accredited": null,
+        "clia_certified": null
+      },
+      "deployment": {
+        "available": true
+      },
+      "sources": [
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242683.pdf",
+          "date_accessed": "2026-05-12"
+        },
+        {
+          "type": "company",
+          "url": "https://quibim.com/qp-prostate/",
+          "date_accessed": "2026-05-12"
+        }
+      ],
+      "validation": {
+        "study_design": "retrospective",
+        "cohort_size": {
+          "n_patients": 228,
+          "n_samples": 247,
+          "unit_note": "Pivotal dataset: 228 cases collected retrospectively from multiple US centers, completely independent from training data. Standalone lesion-level analysis included N=247 lesion observations (positives + negatives from targeted biopsies plus negative cases without biopsy). MRMC: same 228 cases × 9 readers, fully crossed factorial design."
+        },
+        "n_sites": null,
+        "site_geography": "multi_center_us",
+        "comparator": "predicate_device",
+        "primary_endpoint": "AUC",
+        "primary_result": "MRMC primary endpoint: AUCunaided 0.849 (95% CI 0.814, 0.884); AUCaided 0.868 (95% CI 0.834, 0.902); ΔAUC +0.019 (95% CI 0.001, 0.038), p=0.039 — statistically significant. Standalone (lesion level): AUC-ROC 0.732 (95% CI 0.668, 0.791); sensitivity at high-suspicion marker 0.677 (95% CI 0.593, 0.761) with FPR/case 0.417; sensitivity at high+moderate markers 0.795 (95% CI 0.722, 0.861) with FPR/case 0.855.",
+        "external_validation": {
+          "performed": true,
+          "cohort_description": "Pivotal dataset (n=228) acquired in US at multiple centers, independent from training institutions. Demographics: age range 43–81, mean 64.7; 85.1% White, 8.3% African American, 1.3% Asian, 1.8% Other, 3.5% declined/unavailable; 3.1% Hispanic; 86.0% on 3T scanners (14.0% 1.5T); Siemens 62.3%, Philips 20.2%, GE 17.5%.",
+          "result": "Subgroup analyses showed consistent performance across age (≤65, >65), BMI (<25, ≥25), race/ethnicity, and scanner vendor; minor performance deviation on 1.5T attributed to inherently lower image quality vs 3T (3T preferable when available)."
+        },
+        "peer_reviewed": false,
+        "key_publications": [],
+        "limitations_noted": "[Source-detail preserved: Study design: Multi-center; Primary endpoint (original): AUC_aided_vs_unaided] (i) Pivotal dataset enriched 50:50 positive:negative — not population prevalence; (ii) standalone AUC 0.732 is modest; high-+moderate-marker operating point has high FPR/case 0.855; (iii) 1.5T subgroup underperformed vs 3T; (iv) no peer-reviewed pivotal publication identified — only FDA Decision Summary and Quibim press releases.",
+        "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242683.pdf",
+        "data_completeness": "full"
+      }
+    },
+    {
+      "id": "jlk-medihub-prostate",
+      "product_name": "Medihub Prostate",
+      "company": "JLK Inc.",
+      "company_url": "https://jlkgroup.com/en/",
+      "cancer_types": [
+        "prostate"
+      ],
+      "modality": "radiology_mri",
+      "intended_use": "Image processing software for outlining, processing, viewing, and editing of prostate MR images. AI semi-automatically outlines the prostate gland based on MRI by contour for total-volume calculation; AI functionality is limited to total prostate volume — it does not segment lesions. Edited PI-RADS report and semi-annotated prostate region are presented to user. Intended for trained radiologists and urologists. Validated for Siemens 3T Vida and Skyra MRI, slice thickness ≥3mm, patients aged 55+.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2024-06-21",
+        "fda_510k_number": "K233196",
+        "ldt": false,
+        "ce_marked": null,
+        "ny_clep": null,
+        "cap_accredited": null,
+        "clia_certified": null
+      },
+      "deployment": {
+        "available": true
+      },
+      "sources": [
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233196.pdf",
+          "date_accessed": "2026-05-12"
+        }
+      ],
+      "validation": {
+        "study_design": "retrospective",
+        "cohort_size": {
+          "n_patients": 114,
+          "n_samples": 114,
+          "unit_note": "Clinical Testing (Stand-alone Performance): 114 T2 MR images from University of Missouri Hospital (single US site). Ground truth from consensus of three expert radiologists with majority-rule resolution. Reader performance subset (Phase II) used three expert radiologists."
+        },
+        "n_sites": 1,
+        "site_geography": "single_center_us",
+        "comparator": "pathologist_consensus",
+        "primary_endpoint": "concordance",
+        "primary_result": "Standalone segmentation: mean Dice coefficient 0.928 (95% CI 0.925, 0.931); Hausdorff distance 2.171 (95% CI 1.097, 3.245), exceeding pre-specified pass criterion of mean Dice >0.894. Reader study: Dice-coefficient improvements when radiologists used Medihub Prostate were +0.156, +0.011, +0.008 for the three readers (all improved). No cancer-detection sensitivity/specificity reported (algorithm does not detect lesions).",
+        "external_validation": {
+          "performed": false,
+          "cohort_description": "Algorithm development used Korea, US (University of Missouri Health Care), and ProstateX (open dataset). Stand-alone performance Phase I evaluation used 114 cases from University of Missouri (the same source as part of training); per FDA Decision Summary the 'Study Population Dataset is the same as algorithm development dataset' split 9:1 into Train/Validate + Test. This is internal test set splitting rather than truly external validation.",
+          "result": null
+        },
+        "peer_reviewed": false,
+        "key_publications": [],
+        "limitations_noted": "[Source-detail preserved: Study design: Single-center; Primary endpoint (original): dice_coefficient] (i) AI is for prostate-gland volume/segmentation only — does NOT detect or segment lesions; (ii) test set comes from same institutional source as training data ('Study Population Dataset is the same as algorithm development dataset'), so this is internal validation, not true external; (iii) only validated for Siemens 3T Vida and Skyra; (iv) only tested in patients aged 55+ (114/114 male); (v) no peer-reviewed pivotal publication identified; (vi) only 7 African American and 1 Asian subject in test set — very limited racial diversity.",
+        "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K233196.pdf",
+        "data_completeness": "partial"
+      }
+    },
+    {
+      "id": "quantib-prostate",
+      "product_name": "Quantib Prostate",
+      "company": "Quantib BV",
+      "company_url": "https://www.quantib.com/",
+      "cancer_types": [
+        "prostate"
+      ],
+      "modality": "radiology_mri",
+      "intended_use": "Image post-processing software for processing, visualization, and editing of prostate MRI images. Supports registered multi-parametric MRI viewing, semi-automatic AI-based segmentation of anatomical structures (prostate gland and sub-regions), volume computations, manual editing tools, and PI-RADS structured workflow. Diagnosis should not be made solely based on Quantib Prostate analysis.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k_special",
+        "fda_decision_date": "2023-04-17",
+        "fda_510k_number": "K230772",
+        "ldt": false,
+        "ce_marked": true,
+        "ny_clep": null,
+        "cap_accredited": null,
+        "clia_certified": null
+      },
+      "deployment": {
+        "available": true
+      },
+      "sources": [
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K230772.pdf",
+          "date_accessed": "2026-05-12"
+        },
+        {
+          "type": "publication",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40332649/",
+          "date_accessed": "2026-05-12"
+        },
+        {
+          "type": "publication",
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9415513/",
+          "date_accessed": "2026-05-12"
+        }
+      ],
+      "validation": {
+        "study_design": "retrospective",
+        "cohort_size": {
+          "n_patients": null,
+          "n_samples": null,
+          "unit_note": "FDA Special 510(k) bench testing only — sample size for the subregion-segmentation Dice/MSD comparison not disclosed in the public Decision Summary. Predicate clinical performance (Quantib Prostate v2.0, K221106) was leveraged. Peer-reviewed Chiacchio 2025 in La Radiologia Medica and Faiella 2022 in Diagnostics provide independent real-world csPCa detection cohorts (curator should populate full cohort sizes from those full texts)."
+        },
+        "n_sites": null,
+        "site_geography": null,
+        "comparator": "predicate_device",
+        "primary_endpoint": "concordance",
+        "primary_result": "FDA K230772 bench testing: automatic segmentations compared to ground truth via Dice overlap and Mean Surface Distance; results stated 'as safe and effective as the predicate device'. Quantitative Dice/MSD values not disclosed in the public Decision Summary text. Qualitative reader Likert scoring concluded sub-region segmentations and ROI initial localizations 'are judged at least as accurate as the predicate device'.",
+        "external_validation": {
+          "performed": true,
+          "cohort_description": "Independent external evaluations exist in peer-reviewed literature. Per Chiacchio 2025 (La Radiologia Medica), Quantib did not enhance csPCa detection in experienced readers but did improve performance for inexperienced readers; Faiella 2022 reported inter-reader agreement (weighted κ ≈ 0.45–0.46) and shorter reporting time with Quantib.",
+          "result": "Mixed real-world evidence: benefit appears concentrated in less-experienced readers."
+        },
+        "peer_reviewed": true,
+        "key_publications": [
+          {
+            "title": "The added value of artificial intelligence using Quantib Prostate for the detection of prostate cancer at multiparametric magnetic resonance imaging",
+            "journal": "La Radiologia Medica",
+            "year": 2025,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/40332649/",
+            "pivotal": false
+          },
+          {
+            "title": "Quantib Prostate Compared to an Expert Radiologist for the Diagnosis of Prostate Cancer on mpMRI: A Single-Center Preliminary Study",
+            "journal": "Diagnostics",
+            "year": 2022,
+            "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9415513/",
+            "pivotal": false
+          }
+        ],
+        "limitations_noted": "[Source-detail preserved: Study design: Single-center; Primary endpoint (original): dice_coefficient] (i) K230772 is a Special 510(k) — relies heavily on predicate K221106 for clinical performance; current Decision Summary discloses bench only; (ii) no MRMC reader study or AUC/sensitivity/specificity metrics in K230772 public summary; (iii) peer-reviewed evidence mixed — benefit may be limited to less-experienced readers; (iv) curator should review prior predicate K221106 / K202501 for full historical clinical metrics.",
+        "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf23/K230772.pdf",
+        "data_completeness": "partial"
+      }
+    },
+    {
+      "id": "avenda-prostate-cancer-planning",
+      "product_name": "Avenda Health AI Prostate Cancer Planning Software",
+      "company": "Avenda Health, Inc.",
+      "company_url": "https://avendahealth.com/",
+      "cancer_types": [
+        "prostate"
+      ],
+      "modality": "radiology_mri",
+      "intended_use": "AI-based decision-support adjunct to MRI + biopsy review for the prostate oncological workflow. Lesion characterization functions intended for use on patients with pathology-confirmed Gleason Grade Group (GGG) ≥ 2 lesion and biopsy coordinates uploaded — used to evaluate the extent of known disease. The device generates a 3D voxel-level cancer probability map and an Encapsulation Confidence Score for clinician-selected boundaries. Supports treatment-planning (biopsy, focal soft-tissue ablation). Also functions as a medical image viewer (3D-visualization, comparison) for prostate MRI. Marketed commercially as Unfold AI.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2022-11-22",
+        "fda_510k_number": "K221624",
+        "ldt": false,
+        "ce_marked": null,
+        "ny_clep": null,
+        "cap_accredited": null,
+        "clia_certified": null
+      },
+      "deployment": {
+        "available": true
+      },
+      "sources": [
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K221624.pdf",
+          "date_accessed": "2026-05-12"
+        },
+        {
+          "type": "publication",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/38860576/",
+          "date_accessed": "2026-05-12"
+        }
+      ],
+      "validation": {
+        "study_design": "retrospective",
+        "cohort_size": {
+          "n_patients": 50,
+          "n_samples": 50,
+          "unit_note": "FDA MRMC reader study used a whole-mount prostatectomy database of GGG 2-3 patients (representative of intended-use population). Each whole-mount sample included 3D surfaces and pathology labels registered to preoperative T2-weighted MRI. 10 practicing urologists or radiologists from different institutions (range 2–23 years of experience). Each reader reviewed each case. Standalone segmentation test set: 137 patients (prostate segmentation); 50 patients (whole-mount pathology lesion-contouring accuracy)."
+        },
+        "n_sites": 5,
+        "site_geography": "multi_center_us",
+        "comparator": "pathologist_consensus",
+        "primary_endpoint": "sensitivity_specificity",
+        "primary_result": "Reader study (lesion contours vs whole-mount pathology ground truth): Sensitivity mean 97.4% (with device) vs 38.2% (SOC), p<0.0001; Specificity mean 72.1% (with device) vs 53.4% (hemi-gland contours), p<0.0001; Balanced accuracy 84.7% (device) vs 67.2% (SOC) vs 75.9% (hemi-gland), p<0.0001; Complete csPCa encapsulation rate 72.8% (device) vs 1.6% (SOC), p<0.0001; clinical-quality rating: 99% device vs 60% hemi-gland (p<0.0001).",
+        "external_validation": {
+          "performed": true,
+          "cohort_description": "Reader-study cases were independent of training set per FDA summary. The peer-reviewed J Urol 2024 paper (Priester et al.) used a 50-case prostatectomy whole-mount cohort retrospectively eligible for focal therapy; 7 urologists + 3 radiologists from 5 institutions, experience 2–23 years.",
+          "result": "Concordant with FDA summary results: AI assistance improved encapsulation accuracy ~45× vs SOC."
+        },
+        "peer_reviewed": true,
+        "key_publications": [
+          {
+            "title": "Artificial Intelligence Improves the Ability of Physicians to Identify Prostate Cancer Extent",
+            "journal": "Journal of Urology",
+            "year": 2024,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/38860576/",
+            "pivotal": true
+          },
+          {
+            "title": "Prediction and Mapping of Intraprostatic Tumor Extent with Artificial Intelligence",
+            "journal": "European Urology Open Science",
+            "year": 2023,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/37545845/",
+            "pivotal": false
+          }
+        ],
+        "limitations_noted": "[Source-detail preserved: Study design: Multi-center MRMC (multi-reader, multi-case); Primary endpoint (original): sensitivity_specificity_lesion_contouring] (i) Indication is restricted to patients with pathology-confirmed GGG ≥ 2 lesion AND biopsy-coordinate upload — NOT a screening or unaided detection tool; (ii) test cohort 50 patients is small; (iii) predicate is QuantX (DEN170022) but Avenda is the first FDA device specifically for prostate cancer extent mapping; (iv) ground truth is whole-mount prostatectomy — generalizability to patients NOT going to prostatectomy not established; (v) reader pool included urologists in addition to radiologists, broader than typical radiology MRMC.",
+        "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K221624.pdf",
+        "data_completeness": "full"
+      }
+    },
+    {
+      "id": "coreline-aview-lung-nodule",
+      "product_name": "AVIEW Lung Nodule CAD",
+      "company": "Coreline Soft Co., Ltd.",
+      "company_url": "https://www.corelinesoft.com/en/",
+      "cancer_types": [
+        "lung"
+      ],
+      "modality": "radiology_ct",
+      "intended_use": "Computer-Aided Detection (CAD) software designed to assist radiologists in the detection of pulmonary nodules (diameter 3–20 mm) during the review of CT examinations of the chest for asymptomatic populations. Adjunctive second-reader after the radiologist's initial read. Validated using non-contrast chest CT.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2025-12-03",
+        "fda_510k_number": "K251203",
+        "ldt": false,
+        "ce_marked": true,
+        "ny_clep": null,
+        "cap_accredited": null,
+        "clia_certified": null
+      },
+      "deployment": {
+        "available": true
+      },
+      "sources": [
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf25/K251203.pdf",
+          "date_accessed": "2026-05-12"
+        },
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K221592.pdf",
+          "date_accessed": "2026-05-12"
+        }
+      ],
+      "validation": {
+        "study_design": "retrospective",
+        "cohort_size": {
+          "n_patients": 151,
+          "n_samples": 282,
+          "unit_note": "MRMC reader study (K221592): 151 chest CTs (103 negative controls + 48 cases with one or more lung nodules); 11 board-certified radiologists, blinded, 4-week washout between unaided and AI-aided reads. Standalone study: 282 chest CTs (140 with nodule data + 142 without) from three geographically distinct US clinical sites; gender split 132M/150F. K251203 (2025) is a UI-only minor change with no new clinical study."
+        },
+        "n_sites": 3,
+        "site_geography": "multi_center_us",
+        "comparator": "pathologist_consensus",
+        "primary_endpoint": "AUC",
+        "primary_result": "MRMC: AUC 0.73 (unaided, 95% CI 0.66–0.79) vs 0.92 (aided, 95% CI 0.89–0.95), Δ=0.19; Sensitivity 0.68 (unaided, 95% CI 0.62–0.73) vs 0.91 (aided, 95% CI 0.89–0.94), Δ=0.23; FP/scan 0.48 (unaided, 95% CI 0.28–0.69) vs 0.28 (aided, 95% CI 0.15–0.42), Δ improvement 0.24. Standalone: AUC 0.961 (95% CI 0.939–0.983); Sensitivity 0.907 (95% CI 0.846–0.95); Specificity 0.704 (95% CI 0.622–0.778); Sensitivity at FP/scan<2: 0.889 (95% CI 0.849–0.93) at FP/scan=0.504.",
+        "external_validation": {
+          "performed": true,
+          "cohort_description": "Standalone test set sourced from three geographically distinct US clinical sites; anonymized medical data purchased separately from any training or internal validation data per K221592 Decision Summary. Both screening and incidental populations included.",
+          "result": "Subgroup analyses performed for challenging/confounding cases per K221592; consistent performance."
+        },
+        "peer_reviewed": true,
+        "key_publications": [
+          {
+            "title": "Outstanding negative prediction performance of solid pulmonary nodule volume AI for ultra-LDCT baseline lung cancer screening risk stratification",
+            "journal": "Lung Cancer",
+            "year": 2022,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/35123156/",
+            "pivotal": false
+          }
+        ],
+        "limitations_noted": "[Source-detail preserved: Study design: Multi-center MRMC (multi-reader, multi-case); Primary endpoint (original): AUC_aided_vs_unaided] (i) Nodule diameter range 3–20 mm — does not cover sub-3mm or >20mm nodules; (ii) validated using non-contrast CT only; (iii) MRMC cohort enriched (48 positives / 103 negatives) is not population-prevalence representative; (iv) K251203 is a UI-only change — no new clinical data submitted; (v) Lung Cancer 2022 paper is an independent real-world Moscow Lung Cancer Screening evaluation, not the pivotal trial.",
+        "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf22/K221592.pdf",
+        "data_completeness": "full"
+      }
+    },
+    {
+      "id": "v5med-lung-ai",
+      "product_name": "V5med Lung AI",
+      "company": "V5med Inc.",
+      "company_url": null,
+      "cancer_types": [
+        "lung"
+      ],
+      "modality": "radiology_ct",
+      "intended_use": "Computer-Aided Detection (CAD) software designed to assist radiologists in detecting pulmonary nodules (diameter 4–30 mm) during chest CT examinations. Concurrent-read mode (AI analysis results displayed alongside the original CT images during both the initial review and any subsequent reads). Does not replace radiologist judgment.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2025-03-27",
+        "fda_510k_number": "K242919",
+        "ldt": false,
+        "ce_marked": null,
+        "ny_clep": null,
+        "cap_accredited": null,
+        "clia_certified": null
+      },
+      "deployment": {
+        "available": true
+      },
+      "sources": [
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242919.pdf",
+          "date_accessed": "2026-05-12"
+        }
+      ],
+      "validation": {
+        "study_design": "retrospective",
+        "cohort_size": {
+          "n_patients": 340,
+          "n_samples": 340,
+          "unit_note": "Pivotal reader study (retrospective fully crossed MRMC): 16 board-certified radiologists × 340 chest CT scans (mix of screening and non-screening). All screening cases drawn from NLST CT arm. Age range 55–77 (mean 62). 41.1% male / 58.9% female. Race: 92.8% White, 4.4% Black, 2.2% Asian, 0.3% Pacific Islander, 0.3% Indian."
+        },
+        "n_sites": null,
+        "site_geography": "multi_center_us",
+        "comparator": "pathologist_consensus",
+        "primary_endpoint": "AUC",
+        "primary_result": "MRMC pivotal study: AUC unaided 0.734, aided 0.830; Δ (Aided − Unaided) = +0.0959 (95% CI 0.0586, 0.1332). Reading time: 113.0 s unaided vs 115.9 s aided; difference reported as -17.1 (95% CI -26.7, -9.0), i.e., a ~13% reduction (NB: the SSED table appears to show aided slightly longer than unaided, but the calculated difference is reported as a 17.1 s reduction — see Discrepancies). All endpoints met acceptance criteria. Standalone testing showed 'similar nodule detection sensitivity compared to those of the predicate device' (AVIEW K221592) — exact metrics not disclosed.",
+        "external_validation": {
+          "performed": true,
+          "cohort_description": "Screening cases sourced from the National Lung Screening Trial (NLST) CT arm. Population demographics with broad age (55–77) and racial diversity reported.",
+          "result": "Statistically significant AUC improvement (+0.0959) and statistically significant decrease in reading time."
+        },
+        "peer_reviewed": false,
+        "key_publications": [],
+        "limitations_noted": "[Source-detail preserved: Study design: MRMC (multi-reader, multi-case); Primary endpoint (original): AUC_LROC_aided_vs_unaided] (i) Standalone metrics not disclosed in K242919 public summary — only relative-to-predicate language; (ii) Site count not disclosed; (iii) reading-time numbers in the FDA table appear inconsistent with the stated difference — possible typographic error in the SSED (unaided reported as 113.0s, aided as 115.9s, but the reported 'difference' is -17.1s); (iv) no peer-reviewed pivotal publication identified; (v) racial diversity skewed (92.8% White) reflecting NLST source population.",
+        "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf24/K242919.pdf",
+        "data_completeness": "partial"
+      }
+    },
+    {
+      "id": "samsung-auto-lung-nodule",
+      "product_name": "Auto Lung Nodule Detection",
+      "company": "Samsung Electronics Co., Ltd.",
+      "company_url": "https://www.samsunghealthcare.com/",
+      "cancer_types": [
+        "lung"
+      ],
+      "modality": "radiology_cxr",
+      "intended_use": "Computer-aided detection (CADe) software to identify and mark regions in relation to suspected pulmonary nodules 10–30 mm in size on posterior-anterior (PA) chest radiographs of adults. Designed as a second reader, integrated into S-Station operation software on Samsung Digital X-ray Imaging systems. Not intended for patients with lung lesions other than abnormal nodules.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2021-08-31",
+        "fda_510k_number": "K201560",
+        "ldt": false,
+        "ce_marked": null,
+        "ny_clep": null,
+        "cap_accredited": null,
+        "clia_certified": null
+      },
+      "deployment": {
+        "available": true
+      },
+      "sources": [
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K201560.pdf",
+          "date_accessed": "2026-05-12"
+        }
+      ],
+      "validation": {
+        "study_design": "retrospective",
+        "cohort_size": {
+          "n_patients": null,
+          "n_samples": null,
+          "unit_note": "K201560 Decision Summary describes design (multi-reader retrospective study using normal + diseased chest radiographs, sensitivity/FPPI/JAFROC FOM endpoints) but DOES NOT disclose quantitative N, sensitivity, specificity, or AUC. Press release indicates approval was 'based on a sensitivity of 80% or more' and study was conducted across Freiburg University Hospital, Massachusetts General Hospital, Samsung Medical Center, and Severance Hospital with 600 lung-cancer chest radiographs + 200 normals."
+        },
+        "n_sites": 4,
+        "site_geography": "multi_center_international",
+        "comparator": "pathologist_consensus",
+        "primary_endpoint": "AUC",
+        "primary_result": "K201560 Decision Summary: 'all readers' nodule detection performances using the proposed device have increased with statistical significance.' Specific quantitative metrics NOT disclosed in the FDA Decision Summary. Press materials cite ≥80% sensitivity acceptance criterion.",
+        "external_validation": {
+          "performed": true,
+          "cohort_description": "Per Samsung/NeuroLogica press materials: '600 chest radiographs with lung cancer and 200 normal chest radiographs' from Freiburg University Hospital (Germany), Massachusetts General Hospital (US), Samsung Medical Center (Korea), and Severance Hospital (Korea) — multi-national external evaluation.",
+          "result": "Sensitivity stated by Samsung press as ≥80% (acceptance criterion); specific multi-center breakdown not in FDA summary."
+        },
+        "peer_reviewed": false,
+        "key_publications": [],
+        "limitations_noted": "[Source-detail preserved: Study design: MRMC (multi-reader, multi-case); Primary endpoint (original): JAFROC_figure_of_merit] (i) Modality is chest X-RAY (PA radiograph), NOT CT — important distinction from CT-based lung nodule CADs; (ii) limited to nodules 10–30 mm; (iii) FDA Decision Summary does not disclose quantitative validation metrics — only narrative claim of statistical significance; (iv) press-release-sourced metrics are Tier 4 and should not be treated as primary numbers; (v) no peer-reviewed pivotal publication identified; (vi) device tightly coupled to Samsung Digital X-ray Imaging systems / S-Station — not modality-agnostic.",
+        "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf20/K201560.pdf",
+        "data_completeness": "partial"
+      }
+    },
+    {
+      "id": "body-vision-lung",
+      "product_name": "LungVision System",
+      "company": "Body Vision Medical Ltd.",
+      "company_url": "https://www.bodyvisionmedical.com/",
+      "cancer_types": [
+        "lung"
+      ],
+      "modality": "radiology_ct",
+      "intended_use": "Image navigation and guidance system that enables segmentation of previously acquired 3D CT datasets and overlay/registration of these 3D segmented data sets with fluoroscopic live X-ray images of the same anatomy in order to support catheter/device navigation during pulmonary procedures (i.e., bronchoscopic biopsy of peripheral pulmonary lesions suspicious for cancer). Uses AI-driven augmented fluoroscopy and image fusion.",
+      "regulatory": {
+        "fda_status": "510(k) cleared",
+        "fda_pathway": "510k",
+        "fda_decision_date": "2019-04-18",
+        "fda_510k_number": "K183593",
+        "ldt": false,
+        "ce_marked": null,
+        "ny_clep": null,
+        "cap_accredited": null,
+        "clia_certified": null
+      },
+      "deployment": {
+        "available": true
+      },
+      "sources": [
+        {
+          "type": "fda_db",
+          "url": "https://www.accessdata.fda.gov/cdrh_docs/pdf18/K183593.pdf",
+          "date_accessed": "2026-05-12"
+        },
+        {
+          "type": "publication",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/34096182/",
+          "date_accessed": "2026-05-12"
+        },
+        {
+          "type": "publication",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/32732491/",
+          "date_accessed": "2026-05-12"
+        }
+      ],
+      "validation": {
+        "study_design": "prospective",
+        "cohort_size": {
+          "n_patients": 63,
+          "n_samples": 63,
+          "unit_note": "Pertzov 2021 prospective single-center (Rabin Medical Center, Israel; January 2016 – August 2020): 63 procedures performed with LungVision navigation for peripheral pulmonary nodule biopsy; median lesion size 25.0 mm. Pritchett 2021 multicenter prospective study of augmented-fluoroscopic navigation reported a separate cohort (index-procedure yield 78.4%, 12-month diagnostic accuracy 88.2%)."
+        },
+        "n_sites": 1,
+        "site_geography": "multi_center_international",
+        "comparator": "clinical_outcomes",
+        "primary_endpoint": "other",
+        "primary_result": "Pertzov 2021: overall diagnostic yield 81.8%; for lesions <20 mm, 72.2%. In 9 cases, transbronchial cryobiopsy yielded malignant tissue not found in other sampling tools. Complications: 1 pneumothorax requiring chest tube; no other major complications. Pritchett 2021: index-procedure diagnostic yield 78.4%; 12-month follow-up diagnostic accuracy 88.2%.",
+        "external_validation": {
+          "performed": false,
+          "cohort_description": "Pertzov 2021 is single-center (Rabin, Israel). Pritchett 2021 is a separate multicenter prospective cohort but not formally external to the device manufacturer.",
+          "result": null
+        },
+        "peer_reviewed": true,
+        "key_publications": [
+          {
+            "title": "The LungVision navigational platform for peripheral lung nodule biopsy and the added value of cryobiopsy",
+            "journal": "Thoracic Cancer",
+            "year": 2021,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/34096182/",
+            "pivotal": true
+          },
+          {
+            "title": "Prospective Analysis of a Novel Endobronchial Augmented Fluoroscopic Navigation System for Diagnosis of Peripheral Pulmonary Lesions",
+            "journal": "Journal of Bronchology & Interventional Pulmonology",
+            "year": 2021,
+            "url": "https://pubmed.ncbi.nlm.nih.gov/32732491/",
+            "pivotal": true
+          }
+        ],
+        "limitations_noted": "[Source-detail preserved: Study design: Single-center; Primary endpoint (original): diagnostic_yield; Site geography (original): single_center_international] (i) FDA Decision Summary K183593 contains only bench/engineering tests (ANSI/AAMI 60601-1, pig-lung deformable-tissue testing) — no clinical metrics; clinical evidence comes from peer-reviewed publications, not the FDA summary; (ii) Pertzov cohort is single-center and small (n=63); (iii) diagnostic yield is an interventional pulmonology outcome, not a typical 'AI sensitivity/specificity' — comparator class is different from screening/detection AIs; (iv) device is procedural-guidance — does not detect cancer, but guides biopsy of presumed-cancer lesions.",
+        "fda_summary_url": "https://www.accessdata.fda.gov/cdrh_docs/pdf18/K183593.pdf",
+        "data_completeness": "partial"
+      }
     }
   ]
 }
