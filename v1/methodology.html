@@ -22,7 +22,7 @@
 
 <main class="max-w-4xl mx-auto px-4 py-10 prose prose-slate">
   <h1 class="text-3xl font-bold navy">Methodology</h1>
-  <p class="text-slate-500 text-sm">Version 0.1 — last updated April 20, 2026</p>
+  <p class="text-slate-500 text-sm">Version 0.2 — last updated May 7, 2026</p>
 
   <h2 class="text-xl font-semibold mt-8 navy">Purpose</h2>
   <p>The OncologyAI Registry exists to provide a single, curated, source-cited reference for AI/ML-based diagnostic tools available or in late-stage development for U.S. oncology. The registry is independent, open-data (CC BY 4.0), and updated quarterly.</p>
@@ -49,11 +49,38 @@
     <li><b>Cancer type(s) and modality</b> (histopathology, radiology, genomic, liquid biopsy, multi-omics)</li>
     <li><b>Intended use</b> as stated by the manufacturer or in the FDA labeling</li>
     <li><b>Regulatory status</b>: FDA pathway (510(k), De Novo, PMA, Breakthrough Device, LDT), decision date, NY CLEP status, CLIA/CAP accreditation</li>
-    <li><b>Clinical evidence</b>: pivotal peer-reviewed publication(s) with PMID where available</li>
+    <li><b>Validation summary</b>: structured fields capturing the evidence behind the tool — see "Validation summary schema" below</li>
     <li><b>Deployment</b>: market availability, partner labs, estimated cancer-center adoption</li>
     <li><b>Reimbursement</b>: CPT / PLA codes, payer coverage notes (where public)</li>
     <li><b>Sources</b>: every claim is linked to a verifiable URL with date accessed</li>
   </ul>
+
+  <h2 class="text-xl font-semibold mt-8 navy">Validation summary schema</h2>
+  <p>To make the registry useful for comparison and citation, each entry has a structured <b>validation summary</b> capturing the evidence behind the tool — not just its regulatory pathway. FDA clearance is a regulatory bar; it is not synonymous with rigorous clinical validation. Two FDA-cleared tools can rest on very different evidence bases. The validation summary surfaces those differences.</p>
+  <p>Fields per entry:</p>
+  <ul>
+    <li><b>Study design</b>: prospective, retrospective, RCT, meta-analysis, bench-only, or unpublished</li>
+    <li><b>Cohort size</b>: separate counts for patients vs. samples (slides / images / scans), with a unit note for clarity</li>
+    <li><b>Number of sites</b> and <b>site geography</b>: single-center US, multi-center US, or multi-center international</li>
+    <li><b>Comparator</b>: what the AI's performance was measured against. Allowed values:
+      <ul>
+        <li><code>pathologist_consensus</code> — ground truth set by expert reviewer agreement</li>
+        <li><code>gold_standard_test</code> — orthogonal reference assay (e.g., IHC, FISH, sequencing)</li>
+        <li><code>clinical_outcomes</code> — actual events (recurrence, metastasis, death) used as ground truth</li>
+        <li><code>clinicopathologic_factors</code> — AI compared against baseline demographic/pathologic variables in multivariable analysis to show incremental prognostic value (common for prognostic genomic classifiers)</li>
+        <li><code>predicate_device</code> — comparison to an existing FDA-cleared predicate (typical for 510(k)s)</li>
+        <li><code>none</code> — no formal comparator</li>
+      </ul>
+    </li>
+    <li><b>Primary endpoint and result</b>: e.g., AUC 0.89 (95% CI 0.85–0.92). Allowed endpoint categories include <code>AUC</code>, <code>sensitivity</code>, <code>specificity</code>, <code>sensitivity_specificity</code>, <code>ppv_npv</code> (positive/negative predictive value — common for screening tests like multi-cancer early detection), <code>hazard_ratio</code>, <code>time_to_event_risk_strata</code> (Kaplan–Meier event rates by pre-specified risk categories — common for prognostic classifiers), <code>concordance</code>, and <code>other</code>.</li>
+    <li><b>External validation</b>: whether an independent cohort was used, with description and result</li>
+    <li><b>Peer-reviewed</b>: whether the pivotal evidence is peer-reviewed</li>
+    <li><b>Key publications</b>: list of cited publications, with the pivotal trial flagged</li>
+    <li><b>Limitations noted</b>: study-level caveats sourced from the publication or FDA summary</li>
+    <li><b>FDA decision summary</b>: link to accessdata.fda.gov where available</li>
+    <li><b>Data completeness</b>: <code>full</code>, <code>partial</code>, or <code>stub</code> — explicit signaling of how much we have verified for each entry</li>
+  </ul>
+  <p>v0.2 ships with a subset of entries fully populated and the remainder marked as stubs. Stub entries are still useful for the regulatory and deployment fields; the validation block will be filled in subsequent releases as primary sources are reviewed for each tool. We are explicit about this asymmetry rather than implying uniform depth across all entries.</p>
 
   <h2 class="text-xl font-semibold mt-8 navy">Source hierarchy</h2>
   <p>When a fact is supported by multiple sources, we prioritize:</p>
@@ -74,7 +101,8 @@
 
   <h2 class="text-xl font-semibold mt-8 navy">Citation</h2>
   <p>Please cite the registry as:</p>
-  <pre class="bg-slate-100 p-3 rounded text-sm">Elbakri A. OncologyAI Registry [v0.1]. Available at: https://oncologyairegistry.org. Accessed [date].</pre>
+  <pre class="bg-slate-100 p-3 rounded text-sm">Elbakri A. OncologyAI Registry [v0.2]. Available at: https://oncologyairegistry.org. Accessed [date].</pre>
+  <p>To cite a specific tool, use the per-tool URL — e.g., <code class="text-xs">https://oncologyairegistry.org/tools/&lt;tool-id&gt;.html</code>.</p>
   <p class="text-sm text-slate-600">A formal methods paper describing the registry is in preparation and will be the canonical citation upon publication.</p>
 
   <h2 class="text-xl font-semibold mt-8 navy">Contributing</h2>

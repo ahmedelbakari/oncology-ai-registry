@@ -32,7 +32,7 @@
       <a href="#registry" class="hover:underline">Registry</a>
       <a href="methodology.html" class="hover:underline">Methodology</a>
       <a href="about.html" class="hover:underline">About</a>
-      <a href="https://github.com/" class="hover:underline">GitHub</a>
+      <a href="https://github.com/ahmedelbakari/oncology-ai-registry" class="hover:underline">GitHub</a>
     </nav>
   </div>
 </header>
@@ -49,7 +49,7 @@
     <div class="mt-6 flex flex-wrap gap-3 text-sm">
       <span class="badge bg-white text-slate-900" id="entry-count">— entries</span>
       <span class="badge bg-emerald-500 text-white">Open data · CC BY 4.0</span>
-      <span class="badge bg-amber-500 text-white">v0.1 · launching 2026</span>
+      <span class="badge bg-amber-500 text-white">v0.2 · launching 2026</span>
     </div>
   </div>
 </section>
@@ -89,7 +89,7 @@
   </div>
 
   <p class="text-xs text-slate-500 mt-3">
-    Missing or wrong? <a href="https://github.com/" class="underline navy">Suggest an edit on GitHub</a>.
+    Missing or wrong? <a href="https://github.com/ahmedelbakari/oncology-ai-registry" class="underline navy">Suggest an edit on GitHub</a>.
     Curator: Ahmed Elbakri. License: CC BY 4.0.
   </p>
 </section>
@@ -97,7 +97,7 @@
 <!-- Footer -->
 <footer class="mt-12 border-t bg-slate-50">
   <div class="max-w-6xl mx-auto px-4 py-8 text-xs text-slate-500 flex flex-wrap justify-between gap-2">
-    <div>OncologyAI Registry · v0.1 · last updated <span id="updated"></span></div>
+    <div>OncologyAI Registry · v0.2 · last updated <span id="updated"></span></div>
     <div>Independent project · No financial relationships disclosed for the curator with listed companies except as noted on individual entries.</div>
   </div>
 </footer>
@@ -193,13 +193,17 @@ function render() {
     tr.className = "row border-t border-slate-200 align-top";
     const reg = (e.regulatory && e.regulatory.fda_status) || "";
     const regCls = REG_LABELS[reg] || "bg-slate-100 text-slate-700";
-    const evidence = e.clinical_evidence
-      ? `<a href="${e.clinical_evidence.url || '#'}" class="navy hover:underline">${e.clinical_evidence.journal || ""} ${e.clinical_evidence.year || ""}</a>`
+    const pivotalPub = (e.validation && (e.validation.key_publications || []).find(p => p.pivotal))
+                    || (e.validation && (e.validation.key_publications || [])[0])
+                    || null;
+    const evidence = pivotalPub
+      ? `<a href="${pivotalPub.url || '#'}" class="navy hover:underline">${pivotalPub.journal || ""} ${pivotalPub.year || ""}</a>`
       : '<span class="text-slate-400">—</span>';
     const modality = MODALITY_LABELS[e.modality] || (e.modality || "").replace(/_/g, " ");
+    const detailUrl = `tools/${e.id}.html`;
     tr.innerHTML = `
       <td class="px-3 py-3">
-        <div class="font-semibold">${e.product_name}</div>
+        <a href="${detailUrl}" class="font-semibold navy hover:underline">${e.product_name}</a>
         <div class="text-xs text-slate-500 mt-1">${e.intended_use || ""}</div>
       </td>
       <td class="px-3 py-3">
@@ -214,6 +218,7 @@ function render() {
       </td>
       <td class="px-3 py-3">${evidence}</td>
     `;
+    tr.style.cursor = "default";
     rows.appendChild(tr);
   });
 
