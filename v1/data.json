@@ -1,6 +1,6 @@
 {
   "schema_version": "0.2",
-  "last_updated": "2026-04-22",
+  "last_updated": "2026-05-31",
   "curator": "Ahmed Elbakri",
   "license": "CC BY 4.0",
   "entries": [
@@ -115,35 +115,35 @@
         }
       ],
       "validation": {
-        "study_design": null,
+        "study_design": "retrospective",
         "cohort_size": {
-          "n_patients": null,
+          "n_patients": 269,
           "n_samples": null,
-          "unit_note": null
+          "unit_note": "269 patients with BCG-naive high-grade Ta NMIBC treated with adjuvant intravesical BCG after TURBT (2004-2024); none from the biomarker development set. Distinct from the cohort in Valar's BCGPredict paper."
         },
-        "n_sites": null,
-        "site_geography": null,
-        "comparator": null,
-        "primary_endpoint": null,
-        "primary_result": null,
+        "n_sites": 13,
+        "site_geography": "multi_center_international",
+        "comparator": "clinicopathologic_factors",
+        "primary_endpoint": "hazard_ratio",
+        "primary_result": "Primary endpoint high-grade recurrence-free survival (HG-RFS): CHAI biomarker HR 2.23 (95% CI 1.45-3.44; p<0.001), outperforming EAU and AUA/SUO guideline risk-stratification schemes. On multivariable adjustment, AUA risk (HR 1.93, 95% CI 1.07-3.48; p=0.029) and EAU risk (HR 1.47, 95% CI 0.96-2.23; p=0.074) were not independently significant. Secondary endpoint MIBC progression-free survival: CHAI AI component HR 4.55 (95% CI 1.39-14.92; p=0.012).",
         "external_validation": {
-          "performed": null,
-          "cohort_description": null,
-          "result": null
+          "performed": false,
+          "cohort_description": "Single multicenter analysis cohort of 269 patients, none in the biomarker development set; no separate independent external-validation cohort in this publication.",
+          "result": "CHAI biomarker outperformed EAU and AUA/SUO guideline risk schemes for both HG-RFS and MIBC-PFS within this cohort."
         },
         "peer_reviewed": true,
         "key_publications": [
           {
-            "title": "CHAI Biomarkers Validated in High Grade Ta Bladder Cancer",
+            "title": "Computational Histology Artificial Intelligence (CHAI) Enhances Risk Stratification of High-grade Ta Non-muscle-invasive Bladder Cancer in a Multicenter Cohort: Comparison to Current European Association of Urology and American Urological Association Stratification Schemes",
             "journal": "European Urology",
             "year": 2025,
-            "url": "https://www.businesswire.com/news/home/20250612200267/en/",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/40514253/",
             "pivotal": true
           }
         ],
-        "limitations_noted": null,
+        "limitations_noted": "[Source-detail: comparator = EAU/AUA guideline risk groups; primary endpoint = high-grade recurrence-free survival; geography = 12 US sites + 1 Chilean site.] Authors note the study is limited by its retrospective nature and potential for bias or variation in clinical factors across participating sites.",
         "fda_summary_url": null,
-        "data_completeness": "stub"
+        "data_completeness": "full"
       }
     },
     {
@@ -174,35 +174,35 @@
         }
       ],
       "validation": {
-        "study_design": null,
+        "study_design": "retrospective",
         "cohort_size": {
-          "n_patients": null,
+          "n_patients": 477,
           "n_samples": null,
-          "unit_note": null
+          "unit_note": "Advanced PDAC patients: 178 in the multi-institutional development cohort + 299 in the independent validation cohort (F-pref n=173, G-pref n=126) drawn from the prospective COMPASS and PanCAN Know Your Tumor studies."
         },
         "n_sites": null,
-        "site_geography": null,
-        "comparator": null,
-        "primary_endpoint": null,
-        "primary_result": null,
+        "site_geography": "multi_center_international",
+        "comparator": "clinical_outcomes",
+        "primary_endpoint": "other",
+        "primary_result": "Independent validation cohort (n=299): F-pref group (n=173) F-chemo vs G-chemo TNTD 8.6 vs 7.5 mo (P=.035), OS 14.4 vs 11.7 mo (P=.003); G-pref group (n=126) G-chemo vs F-chemo TNTD 9.6 vs 7.2 mo (P=.038), OS 14.3 vs 12.4 mo (P=.5, NS). Propensity-score-weighted biomarker-treatment interaction P<.001 (TNTD); P=.005 (OS).",
         "external_validation": {
-          "performed": null,
-          "cohort_description": null,
-          "result": null
+          "performed": true,
+          "cohort_description": "Independent validation cohort of 299 patients from the prospective COMPASS and PanCAN Know Your Tumor studies, separate from the 178-patient development cohort. Biomarker and threshold locked before validation.",
+          "result": "Biomarker-treatment interaction significant for both TNTD (P<.001) and OS (P=.005) on propensity-score-weighted analysis."
         },
         "peer_reviewed": true,
         "key_publications": [
           {
-            "title": "Pivotal Study Validating AI to Predict Chemotherapy Response for Pancreatic Cancer Patients",
+            "title": "Development and Validation of a Computational Histology Artificial Intelligence-Powered Predictive Biomarker for Selection of Chemotherapy in Advanced Pancreatic Cancer",
             "journal": "Journal of Clinical Oncology",
             "year": 2026,
-            "url": "https://www.businesswire.com/news/home/20260210051551/en/",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/41671529/",
             "pivotal": true
           }
         ],
-        "limitations_noted": null,
+        "limitations_noted": "[Source-detail: primary endpoints = time to next treatment/death (TNTD) and overall survival; comparator = alternative first-line chemotherapy regimen (fluoropyrimidine- vs gemcitabine-based).] JCO full text paywalled; n_sites and the formal limitations section not accessible. Validation cohort assembled from two distinct prospective studies (COMPASS, Know Your Tumor), not a single randomized prospective trial.",
         "fda_summary_url": null,
-        "data_completeness": "stub"
+        "data_completeness": "partial"
       }
     },
     {
@@ -285,7 +285,7 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": "2025-02-10",
+        "fda_decision_date": "2025-01-24",
         "ce_marked": true,
         "fda_510k_number": "K241232"
       },
@@ -295,8 +295,8 @@
       "sources": [
         {
           "type": "company",
-          "url": "https://ibex-ai.com/galen-prostate/",
-          "date_accessed": "2026-04-20"
+          "url": "https://ibex-ai.com/fda-510k-clearance/",
+          "date_accessed": "2026-05-31"
         }
       ],
       "validation": {
@@ -580,7 +580,7 @@
         "prostate"
       ],
       "modality": "histopathology",
-      "intended_use": "AI-derived multimodal prognostic and predictive test for localized prostate cancer to guide therapy intensification.",
+      "intended_use": "AI-derived multimodal prognostic and predictive test for localized prostate cancer to guide therapy intensification. Originally offered as a laboratory-developed test; FDA De Novo authorized 2025-07-31 (DEN240068).",
       "regulatory": {
         "fda_status": "De Novo authorized",
         "fda_pathway": "de_novo",
@@ -757,7 +757,8 @@
       "regulatory": {
         "fda_status": "510(k) cleared",
         "fda_pathway": "510k",
-        "fda_decision_date": "2018-12"
+        "fda_decision_date": "2018-12-06",
+        "fda_510k_number": "K182373"
       },
       "deployment": {
         "available": true
@@ -792,7 +793,7 @@
             "title": "Improving Accuracy and Efficiency with Concurrent Use of Artificial Intelligence for Digital Breast Tomosynthesis",
             "journal": "Radiology: Artificial Intelligence",
             "year": 2019,
-            "url": "https://pubmed.ncbi.nlm.nih.gov/33937794/",
+            "url": "https://pubmed.ncbi.nlm.nih.gov/32076660/",
             "pivotal": true
           }
         ],
@@ -1240,7 +1241,7 @@
         "cohort_size": {
           "n_patients": 125,
           "n_samples": 795,
-          "unit_note": "Reinert 2019: 125 patients (stage I–III CRC, post-curative-surgery); 795 longitudinal plasma samples (baseline + 30-d post-op + every 3 months until death, withdrawal, or 3 years). 122 evaluable pre-op."
+          "unit_note": "Reinert 2019: 125 patients (stage I–III CRC, post-curative-surgery); 829 longitudinal plasma samples (baseline + 30-d post-op + every 3 months until death, withdrawal, or 3 years). 122 evaluable pre-op."
         },
         "n_sites": null,
         "site_geography": "multi_center_international",
@@ -2147,7 +2148,7 @@
         "breast"
       ],
       "modality": "histopathology",
-      "intended_use": "AI assistant for HER2 IHC interpretation in invasive breast cancer.",
+      "intended_use": "AI inference of HER2 status from H&E-stained breast cancer slides (no IHC required).",
       "regulatory": {
         "fda_status": "Research Use",
         "fda_pathway": null,
@@ -2541,11 +2542,11 @@
       "validation": {
         "study_design": "prospective",
         "cohort_size": {
-          "n_patients": 191,
+          "n_patients": 183,
           "n_samples": 191,
-          "unit_note": "Prospective, multicenter, blinded cohort of 191 cytologically indeterminate (Bethesda III/IV) thyroid nodule FNA samples; ground truth = blinded expert histopathology."
+          "unit_note": "Prospective, multicenter, blinded cohort: 183 patients with cytologically indeterminate (Bethesda III/IV) thyroid nodules across 49 academic and community centers; 191 FNA samples had adequate residual RNA for analysis; ground truth = blinded expert histopathology."
         },
-        "n_sites": null,
+        "n_sites": 49,
         "site_geography": "multi_center_us",
         "comparator": "gold_standard_test",
         "primary_endpoint": "sensitivity_specificity",
@@ -3548,15 +3549,14 @@
       "regulatory": {
         "fda_status": "Research Use",
         "fda_pathway": null,
-        "ldt": true,
+        "ldt": false,
         "ce_marked": true,
         "fda_decision_date": null
       },
       "deployment": {
         "available": true,
         "primary_markets": [
-          "EU",
-          "US"
+          "EU"
         ]
       },
       "sources": [
@@ -3664,14 +3664,13 @@
       "regulatory": {
         "fda_status": "Research Use",
         "fda_pathway": null,
-        "ldt": true,
+        "ldt": false,
         "ce_marked": true
       },
       "deployment": {
         "available": true,
         "primary_markets": [
-          "EU",
-          "US"
+          "EU"
         ]
       },
       "sources": [
@@ -3824,7 +3823,7 @@
       "regulatory": {
         "fda_status": "Research Use",
         "fda_pathway": null,
-        "ldt": true,
+        "ldt": false,
         "ce_marked": true
       },
       "deployment": {
@@ -4983,7 +4982,7 @@
       "sources": [
         {
           "type": "company",
-          "url": "https://www.exactsciences.com/products/oncotype-dx",
+          "url": "https://www.exactsciences.com/cancer-testing/oncotype-dx-breast-recurrence-score-invasive-ductal",
           "date_accessed": "2026-04-20"
         }
       ],
@@ -5833,7 +5832,7 @@
           "cohort_description": "External evaluation cohort of 3,502 patients across 5 cohorts spanning 7 countries (USA, South Korea, Lithuania, Malaysia, Switzerland, Wales/UK), institutionally distinct from the 4,659-patient 10-cohort development set. Includes Karmanos Cancer Institute, University Hospital Basel, UChicago Medicine, plus public datasets (TCGA-BRCA, METABRIC, BASIS, Providence).",
           "result": "DFI C-index 0.71 (0.68–0.75), HR 3.63 (3.02–4.37, p<0.001); ATX added independent prognostic information beyond Oncotype DX and clinicopathologic variables (adjusted HR 3.11 [1.91–5.09], p<0.001)."
         },
-        "peer_reviewed": false,
+        "peer_reviewed": true,
         "key_publications": [
           {
             "title": "Analytical Validation of Multimodal AI Test Predicting Breast Cancer Recurrence Risk (Ataraxis Breast RISK)",
@@ -6075,7 +6074,7 @@
           },
           {
             "title": "Optoacoustic Imaging With Decision Support for Differentiation of Benign and Malignant Breast Masses: A 15-Reader Retrospective Study",
-            "journal": "Academic Radiology",
+            "journal": "AJR. American Journal of Roentgenology",
             "year": 2022,
             "url": "https://pubmed.ncbi.nlm.nih.gov/36475811/",
             "pivotal": false

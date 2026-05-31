@@ -61,6 +61,18 @@ GEOGRAPHY_LABEL = {
     "multi_center_international": "Multi-center (international)",
 }
 
+PRIMARY_ENDPOINT_LABEL = {
+    "AUC": "AUC",
+    "sensitivity": "Sensitivity",
+    "specificity": "Specificity",
+    "sensitivity_specificity": "Sensitivity / specificity",
+    "ppv_npv": "Positive / negative predictive value",
+    "hazard_ratio": "Hazard ratio",
+    "time_to_event_risk_strata": "Time-to-event by risk category",
+    "concordance": "Concordance (C-index)",
+    "other": "Other (see result)",
+}
+
 # FDA pathway: only real submission pathways. "ldt" and "research_use" are
 # statuses, not pathways, and are intentionally not included here — entries
 # in those categories should have fda_pathway = null.
@@ -128,10 +140,10 @@ def render_validation(v):
     rows = [
         ("Study design", DESIGN_LABEL.get(v.get("study_design"), v.get("study_design"))),
         ("Cohort size", cohort_str),
-        ("Number of sites", v.get("n_sites")),
+        ("Number of validation sites", v.get("n_sites")),
         ("Site geography", GEOGRAPHY_LABEL.get(v.get("site_geography"), v.get("site_geography"))),
         ("Comparator", COMPARATOR_LABEL.get(v.get("comparator"), v.get("comparator"))),
-        ("Primary endpoint", v.get("primary_endpoint")),
+        ("Primary endpoint", PRIMARY_ENDPOINT_LABEL.get(v.get("primary_endpoint"), v.get("primary_endpoint"))),
         ("Primary result", v.get("primary_result")),
         ("External validation", ext_str),
         ("Peer-reviewed", "Yes" if v.get("peer_reviewed") is True else ("No" if v.get("peer_reviewed") is False else None)),
